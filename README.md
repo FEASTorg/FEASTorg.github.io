@@ -1,2 +1,1 @@
-# FEASTorg.github.io
-Main organization site.
+# [FEASTorg.github.io](https://feastorg.github.io/)
