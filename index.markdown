@@ -6,9 +6,46 @@ layout: home
 title: Welcome to FEASTorg
 ---
 
-# FEASTorg Projects
+## Overview
+
+### Supporting Resources & Tools
 
 - [KNEEAD](/KNEEAD/)  
-  Knowledge base for FEAST featuring hardware guidelines and supporting tools such as Python-powered calculators & JupyterLite demos
-- [BREAD](/BREAD/)  
-  Hardware ecosystem supporting FEAST featuring SLICE function cards and LOAF controllers.
+  Knowledge for Navigating Electrical & Electronic Architecture and Design. A comprehensive knowledge base featuring hardware guidelines, best practices, review checklists, design conventions, hardware patterns, architectural principles, and supporting tools such as Python-powered calculators & JupyterLite demos.
+
+- [KiCad-Master-Lib](/KiCad-Master-Lib/)  
+  Centralized and curated library of schematic symbols, PCB footprints, and templates for use with KiCad.
+
+- [KiCad-Hierarchical-Designs](/KiCad-Hierarchical-Designs/)  
+  Reference designs demonstrating best practices for hierarchical schematic structures and modular PCB design in KiCad.
+
+- [KiCad-Simulation-Examples](/KiCad-Simulation-Examples/)  
+  Collection of simulation-ready examples and tutorials for circuit validation and analysis using KiCad’s integrated simulation features.
+
+### Functional Implementation Domains
+
+- [BREADS](/BREADS/)  
+  Hardware domain of FEAST, defining standards for SLICE function cards and LOAF controllers.
+
+- [FROOTS](/FROOTS/)  
+  Firmware domain of FEAST, providing standardized interfaces and modular drivers for hardware interoperability.
+
+- [PROTNS](/PROTNS/)  
+  Middleware domain, offering runtime orchestration, device management, and integration between firmware and user software.
+
+- [SUGIRS](/SUGIRS/)  
+  Software/interface domain, enabling user interaction, system monitoring, control interfaces, and remote scheduling.
+
+### Hierarchical Abstraction Levels
+
+- [SLICE](/SLICE/)  
+  Single-function Logic Interface & Controller Element. Single-function PCBs with onboard processing and communication capabilities.
+
+- [LOAF](/LOAF/)  
+  Locally Operated Automation Framework. Integrates multiple SLICE modules to create localized subsystems.
+
+- [BATCH](/BATCH/)  
+  Bridged Architecture for Task Control & Handling. Manages coordination among multiple LOAF systems to perform complex processes.
+
+- [OVEN](/OVEN/)  
+  Orchestrated Versatile Embedded Network. Networks multiple BATCH-level systems to achieve broader organizational or operational goals.
