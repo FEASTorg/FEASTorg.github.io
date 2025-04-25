@@ -1,0 +1,38 @@
+# _config.yml for your main FEASTorg site
+
+title: FEASTorg
+description: >-
+  This is the main FEASTorg landing site, with links to each project.
+baseurl: ""         # Hosted at https://feastorg.github.io
+url: "https://feastorg.github.io"
+
+# Social links
+twitter_username: FEASTorg
+github_username: FEASTorg
+email: contact@feastorg.org
+
+# Theme and plugins
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude directories and files that should not be published
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CNAME
+
+# Optional front-matter defaults
+defaults:
+  -
+    scope:
+      path: ""       # all files
+      type: "posts"
+    values:
+      layout: "post"
+      author: "FEASTorg"
+      comments: true
