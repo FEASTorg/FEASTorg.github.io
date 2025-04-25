@@ -11,4 +11,4 @@ title: Welcome to FEASTorg
 - [KNEEAD](/KNEEAD/)  
   Knowledge base for FEAST featuring hardware guidelines and supporting tools such as Python-powered calculators & JupyterLite demos
 - [BREAD](/BREAD/)  
-  (coming soon…)
+  Hardware ecosystem supporting FEAST featuring SLICE function cards and LOAF controllers.
