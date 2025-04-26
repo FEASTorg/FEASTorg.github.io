@@ -8,7 +8,7 @@ title: Welcome to FEASTorg
 
 ## Concept Overview
 
-FEAST: Flexible and Expandable Automation System Technology
+_**FEAST:** Flexible and Expandable Automation System Technology_
 
 ### Supporting Resources & Tools
 
