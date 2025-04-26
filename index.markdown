@@ -26,9 +26,7 @@ FEAST: Flexible and Expandable Automation System Technology
 
 - [KNEEAD](/KNEEAD/)
 
-  Knowledge for Navigating Electrical & Electronic Architecture and Design.
-
-  A comprehensive knowledge base featuring hardware guidelines, best practices, review checklists, design conventions, hardware patterns, architectural principles, and supporting tools such as Python-powered calculators & JupyterLite demos.
+  **Knowledge for Navigating Electrical & Electronic Architecture and Design** or _"knead"_ is a comprehensive knowledge base featuring hardware guidelines, best practices, review checklists, design conventions, hardware patterns, architectural principles, and supporting tools such as Python-powered calculators & JupyterLite demos.
 
 ### Functional Implementation Domains
 
