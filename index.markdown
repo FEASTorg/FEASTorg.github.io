@@ -34,38 +34,34 @@ FEAST: Flexible and Expandable Automation System Technology
 
 - [BREADS](/BREADS/)
 
-  Broadly Expandable and Reconfigurable Data Acquisition and Automation Device Standard or "breads" encompasses the hardware domain. It defines the electromechanical specifications for compatible hardware. Implementations include: SLICE function cards CRUST interface bridges, and LOAF controllers & backplanes.
+  Broadly Expandable and Reconfigurable Data Acquisition and Automation Device Standard or _"breads"_ encompasses the hardware domain. It defines the electromechanical specifications for compatible hardware. Implementations include: SLICE function cards CRUST interface bridges, and LOAF controllers & backplanes.
 
 - [FROOTS](/FROOTS/)
 
-  Firmware for Resilient, (Function-)Oriented Operation of Things Specification or "fruits" encompasses the firmware domain. It defines standardized logic, interfaces and modules for hardware operation.
+  Firmware for Resilient, (Function-)Oriented Operation of Things Specification or _"fruits"_ encompasses the firmware domain. It defines standardized logic, interfaces and modules for hardware operation.
 
 - [PROTINS](/PROTINS/)
 
-  Programmable Runtime Orchestration and Transport Interfaces for Node Supervision or "proteins" encompasses the middleware domain. It provides runtime orchestration, device management, and modular drivers to bridge the gap between device firmware and user-defined software.
+  Programmable Runtime Orchestration and Transport Interfaces for Node Supervision or _"proteins"_ encompasses the middleware domain. It provides runtime orchestration, device management, and modular drivers to bridge the gap between device firmware and user-defined software.
 
 - [SUGIRS](/SUGIRS/)
 
-  "sugars" is the software/interface domain. It's purpose is enabling user interaction, system monitoring, control interfaces, and remote scheduling.
+  System User Graphical Interface and Remote Scheduling or _"sugars"_ encompasses the software/interface domain. It's purpose is enabling user interaction, system monitoring, control interfaces, and remote scheduling.
 
 ### Hierarchical System Levels
 
-- [SLICE](/SLICE/)  
-  "slice"
+- [SLICE](/SLICE/)
 
-  Single-function Logic Interface & Controller Element. Single-function PCBs with onboard processing and communication capabilities.
+  Single-function Logic Interface & Controller Element or _"slice"_ implements the BREAD standard (BREADS). Single-function boards with onboard processing and communication capabilities. CRUST interfaces can be used to adapt non-SLICE devices into ones that SLICE compliant with BREAD.
 
-- [LOAF](/LOAF/)  
-  "loaf"
+- [LOAF](/LOAF/)
 
-  Locally Operated Automation Framework. Integrates multiple SLICE modules to create localized subsystems.
+  Locally Operated Automation Framework or _"loaf"_ implements the BREAD standard (BREADS) for controllers and corresponding bus infrastructure. Controller and shared communication & power bus to connect multiple SLICEs and coordinate their functions to perform a localized process.
 
-- [BATCH](/BATCH/)  
-  "batch"
+- [BATCH](/BATCH/)
 
-  Bridged Architecture for Task Control & Handling. Manages coordination among multiple LOAF systems to perform complex processes.
+  Bridged Architecture for Task Control & Handling or "batch" represents the coordination of multiple LOAFs in a leader-follower configuration. In this clustered configuration one LOAF is designated the leader to manage the coordination of multiple (follower) LOAF systems to perform complex or distributed processes.
 
-- [OVEN](/OVEN/)  
-  "oven"
+- [OVEN](/OVEN/)
 
-  Orchestrated Versatile Embedded Network. Networks multiple BATCH-level systems to achieve broader organizational or operational goals.
+  Orchestrated Versatile Embedded Network or "oven" represents the aggregation and coordination of one or more BATCH clusters. Networks multiple BATCH-level systems to a central server for high-level management and monitoring of production scheduling, historical archiving, and facility alerts to achieve broader organizational or operational goals.
