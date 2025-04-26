@@ -1,5 +1,6 @@
 # Definitions
 
+FINISHSSHHS
 FEAST: Flexible and Expandable Automation System Technology
 
 ## Hierarchical Abstraction Levels
@@ -20,12 +21,12 @@ FEAST: Flexible and Expandable Automation System Technology
 - **BATCH**
 
   - Multiple LOAF subsystems can be connected to a (micro)computer via interfacing with the leader SLICE of each LOAF to aggregate and coordinate multiple processes to perform some abstract process and connect to a wider network
-  - This is referred to as **BATCH** which stands for _Bridged Architecture for Task Control & Handling_
+  - This is referred to as **BATCH** which stands for _Bridging Architecture for Task Control & Handling_
   - **Example:** A microcomputer managing multiple LOAFs (e.g., one for a mechanical shredder, one for a chemical reactor, and one for a bioreactor,) to create a plastic upcycling system that converts PET waste into edible microbial protein.
 
 - **OVEN**
 
-  - Multiple (micro)computers can be networked in a leader-worker configuration to achieve some business / organizational goal
+  - Multiple (micro)computers can be networked in a leader-worker configuration or using a dedicated server or PC as the leader to achieve some business / organizational goal
   - This is referred to as **OVEN** which stands for _Orchestrated Versatile Embedded Network_
   - **Example:** A distributed recycling and manufacturing system where multiple microcomputers, each managing different BATCH nodes (e.g., plastic upcycling, intermediate conveyor systems, and quality control sensors), coordinate through a central server to optimize production.
 
