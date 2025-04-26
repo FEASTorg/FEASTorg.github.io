@@ -12,12 +12,6 @@ FEAST: Flexible and Expandable Automation System Technology
 
 ### Supporting Resources & Tools
 
-- [KNEEAD](/KNEEAD/)
-
-  Knowledge for Navigating Electrical & Electronic Architecture and Design.
-
-  A comprehensive knowledge base featuring hardware guidelines, best practices, review checklists, design conventions, hardware patterns, architectural principles, and supporting tools such as Python-powered calculators & JupyterLite demos.
-
 - [KiCad-Master-Lib](/KiCad-Master-Lib/)
 
   **KiCad-Master-Lib** is a centralized and curated library of schematic symbols, PCB footprints, and templates for use with KiCad.
@@ -29,6 +23,12 @@ FEAST: Flexible and Expandable Automation System Technology
 - [KiCad-Simulation-Examples](/KiCad-Simulation-Examples/)
 
   **KiCad-Simulation-Examples** is a collection of simulation-ready examples and tutorials for circuit validation and analysis using KiCad’s integrated simulation features.
+
+- [KNEEAD](/KNEEAD/)
+
+  Knowledge for Navigating Electrical & Electronic Architecture and Design.
+
+  A comprehensive knowledge base featuring hardware guidelines, best practices, review checklists, design conventions, hardware patterns, architectural principles, and supporting tools such as Python-powered calculators & JupyterLite demos.
 
 ### Functional Implementation Domains
 
