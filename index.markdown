@@ -39,7 +39,7 @@ title: Welcome to FEASTorg
 
   Middleware domain, offering runtime orchestration, device management, and integration between firmware and user software.
 
-- [SUGIRS](/SUGIRS/)
+- [SUGIRS](/SUGIRS/)  
   "sugars"
 
   Software/interface domain, enabling user interaction, system monitoring, control interfaces, and remote scheduling.
