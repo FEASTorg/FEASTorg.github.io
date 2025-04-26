@@ -26,34 +26,42 @@ title: Welcome to FEASTorg
 
 - [BREADS](/BREADS/)  
   "breads"
+
   Hardware domain of FEAST, defining standards for SLICE function cards and LOAF controllers.
 
 - [FROOTS](/FROOTS/)  
   "fruits"
+
   Firmware domain of FEAST, providing standardized interfaces and modular drivers for hardware interoperability.
 
 - [PROTNS](/PROTNS/)  
   "proteins"
+
   Middleware domain, offering runtime orchestration, device management, and integration between firmware and user software.
 
 - [SUGIRS](/SUGIRS/)
-  "sugars"  
+  "sugars"
+
   Software/interface domain, enabling user interaction, system monitoring, control interfaces, and remote scheduling.
 
 ### Hierarchical Abstraction Levels
 
 - [SLICE](/SLICE/)  
   "slice"
+
   Single-function Logic Interface & Controller Element. Single-function PCBs with onboard processing and communication capabilities.
 
 - [LOAF](/LOAF/)  
   "loaf"
+
   Locally Operated Automation Framework. Integrates multiple SLICE modules to create localized subsystems.
 
 - [BATCH](/BATCH/)  
   "batch"
+
   Bridged Architecture for Task Control & Handling. Manages coordination among multiple LOAF systems to perform complex processes.
 
 - [OVEN](/OVEN/)  
   "oven"
+
   Orchestrated Versatile Embedded Network. Networks multiple BATCH-level systems to achieve broader organizational or operational goals.
