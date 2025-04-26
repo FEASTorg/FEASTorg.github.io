@@ -6,7 +6,7 @@ layout: home
 title: Welcome to FEASTorg
 ---
 
-## Concept Overview
+## Overview
 
 _**FEAST:** Flexible and Expandable Automation System Technology_
 
