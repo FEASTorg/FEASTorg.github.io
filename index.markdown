@@ -14,7 +14,7 @@ _**FEAST:** Flexible and Expandable Automation System Technology_
 
 - [KiCad-Master-Lib](/KiCad-Master-Lib/)
 
-  **KiCad-Master-Lib** is a centralized and curated library of schematic symbols, PCB footprints, and templates for use with KiCad.
+  **KiCad-Master-Lib** is a centralized and curated library of schematic symbols, PCB footprints, and 3D models for use with KiCad.
 
 - [KiCad-Hierarchical-Designs](/KiCad-Hierarchical-Designs/)
 
