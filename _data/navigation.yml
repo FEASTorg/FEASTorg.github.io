@@ -16,3 +16,11 @@
       url: /projects/protins/
     - name: SUGIRS
       url: /projects/sugirs/
+    - name: SLICE
+      url: /projects/slice/
+    - name: LOAF
+      url: /projects/loaf/
+    - name: BATCH
+      url: /projects/batch/
+    - name: OVEN
+      url: /projects/oven/

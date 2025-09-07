@@ -47,6 +47,54 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "slice",
+            "title": "SLICE",
+            "repo": "FEASTorg/SLICE",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/slice",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "loaf",
+            "title": "LOAF",
+            "repo": "FEASTorg/LOAF",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/loaf",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "batch",
+            "title": "BATCH",
+            "repo": "FEASTorg/BATCH",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/batch",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "oven",
+            "title": "OVEN",
+            "repo": "FEASTorg/OVEN",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/oven",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
