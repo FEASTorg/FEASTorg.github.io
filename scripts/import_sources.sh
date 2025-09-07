@@ -2,38 +2,31 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-
-# Ensure tools
-if ! command -v jq >/dev/null 2>&1; then
-  sudo apt-get update && sudo apt-get install -y jq
-fi
-if ! command -v rsync >/dev/null 2>&1; then
-  sudo apt-get update && sudo apt-get install -y rsync
-fi
-
 manifest="$ROOT/sources.json"
+
+# Hard fail if required tools are missing (no apt on CI)
+command -v jq >/dev/null    || { echo "jq not found" >&2; exit 1; }
+command -v rsync >/dev/null || { echo "rsync not found" >&2; exit 1; }
+
 mkdir -p "$ROOT/_ext" "$ROOT/projects"
 
-jq -c '.sources[]' "$manifest" | while read -r row; do
-  name=$(echo "$row" | jq -r .name)
-  title=$(echo "$row" | jq -r '.title // .name')
-  repo=$(echo "$row" | jq -r .repo)
-  ref=$(echo "$row" | jq -r .ref)
-  sub=$(echo "$row" | jq -r .subdir)
-  mount=$(echo "$row" | jq -r .mount)
+jq -c '.sources[]' "$manifest" | while IFS= read -r row; do
+  name=$(jq -r .name                <<<"$row")
+  title=$(jq -r '.title // .name'   <<<"$row")
+  repo=$(jq -r .repo                <<<"$row")
+  ref=$(jq -r .ref                  <<<"$row")
+  sub=$(jq -r .subdir               <<<"$row")
+  mount=$(jq -r .mount              <<<"$row")
 
   tmp="_ext/$name"
   url="https://github.com/$repo.git"
-  if [[ -n "${DOCS_READ_TOKEN:-}" ]]; then
-    url="https://x-access-token:${DOCS_READ_TOKEN}@github.com/${repo}.git"
-  fi
 
   echo "::group::Clone $repo@$ref → $tmp (sparse: $sub)"
   rm -rf "$ROOT/$tmp"
-  git clone --no-checkout --depth 1 --branch "$ref" "$url" "$ROOT/$tmp"
+  git clone --quiet --filter=blob:none --no-checkout --depth 1 --branch "$ref" "$url" "$ROOT/$tmp"
   git -C "$ROOT/$tmp" sparse-checkout init --cone
   git -C "$ROOT/$tmp" sparse-checkout set "$sub"
-  git -C "$ROOT/$tmp" checkout
+  git -C "$ROOT/$tmp" checkout --quiet
   echo "::endgroup::"
 
   echo "::group::Sync $sub → $mount"

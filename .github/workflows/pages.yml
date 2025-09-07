@@ -20,9 +20,6 @@ jobs:
       - name: Checkout hub
         uses: actions/checkout@v5
 
-      - name: Install build tools
-        run: sudo apt-get update && sudo apt-get install -y jq rsync
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -35,8 +32,6 @@ jobs:
 
       - name: Import external docs
         run: bash scripts/import_sources.sh
-        env:
-          DOCS_READ_TOKEN: ${{ secrets.DOCS_READ_TOKEN }}
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
