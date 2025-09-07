@@ -19,6 +19,10 @@ plugins:
 logo: /assets/images/cornucopia-feast-banner.png
 repository: https://github.com/FEASTorg/FEASTorg.github.io
 search: true
+
+# Navigation settings
+nav_external_links_only: true # Only show links from navigation.yml
+aux_links_new_tab: true
 navigation:
   data: navigation
 

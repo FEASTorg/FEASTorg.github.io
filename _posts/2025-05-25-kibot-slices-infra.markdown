@@ -5,7 +5,7 @@ date: 2025-09-07 17:18:45 -0400
 categories: development
 ---
 
-We now have a **reusable CI/CD pipeline** for KiCad boards that builds with **KiBot**, generates a Markdown index, and deploys to **GitHub Pages**—all centralized in **[`FEASTorg/slice-infra`](https://github.com/FEASTorg/slice-infra)**. First trials complete and working at: **[`FEASTorg/Slice_DCMT`](https://github.com/FEASTorg/Slice_DCMT)** and **[`FEASTorg/Slice_TEMP`](https://github.com/FEASTorg/Slice_TEMP)**.
+We now have a **reusable CI/CD pipeline** for KiCad boards that builds with **KiBot**, generates a Markdown index, and deploys to **GitHub Pages**—all centralized in **[`FEASTorg/slice-infra`](https://github.com/FEASTorg/slice-infra)**. First trials complete and working at: **[`FEASTorg/Slice_DCMT`](https://feastorg.github.io/Slice_DCMT)** and **[`FEASTorg/Slice_TEMP`](https://feastorg.github.io/Slice_TEMP)**.
 
 ### What has shipped?
 
