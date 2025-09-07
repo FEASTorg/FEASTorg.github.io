@@ -33,12 +33,12 @@ permalink: pretty
 # Defaults for imported pages
 defaults:
   - scope:
-      path: "projects"
+      path: ""
       type: "pages"
     values:
       layout: "default"
   - scope:
-      path: "projects/**/README.md"
+      path: "**/README.md"
     values:
       nav_exclude: true
 
@@ -50,4 +50,5 @@ exclude:
   - README.md
   - CNAME
   - _ext/
-  - projects/**/.indexignore
+  - **/.indexignore
+
