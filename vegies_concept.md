@@ -1,6 +1,7 @@
 ---
 layout: page
 title: VEGIES Concept
+nav_exclude: true
 permalink: /vegies-concept/
 ---
 

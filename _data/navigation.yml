@@ -1,9 +1,8 @@
-main:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
-  - title: Posts
-    url: /posts/
-  - title: Site Architecture
-    url: /site-architecture/
+- title: Home
+  url: /
+- title: About
+  url: /about
+- title: Posts
+  url: /posts/
+- title: Site Architecture
+  url: /site-architecture/
