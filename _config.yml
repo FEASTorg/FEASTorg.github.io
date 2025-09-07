@@ -10,7 +10,7 @@ github_username: FEASTorg
 email: contact@feastorg.org
 
 # Theme and plugins
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
