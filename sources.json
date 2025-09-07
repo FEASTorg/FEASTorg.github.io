@@ -2,10 +2,15 @@
     "sources": [
         {
             "name": "breads",
+            "title": "BREADS",
             "repo": "FEASTorg/BREADS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/breads"
+            "mount": "projects/breads",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }

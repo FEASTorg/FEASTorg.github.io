@@ -34,6 +34,10 @@ For contributors working on site improvements:
 - Features integrated search functionality
 - Contains core documentation, guides, and project overviews
 
+### Site Filtering
+
+- `source.json` exclude: Hub-level filtering to enforce policy and catch missing, .indexignore in each repo does per-repo filtering
+
 ### Externally Generated Sites
 
 Some documentation is intentionally maintained in separate repositories for the following reasons:

@@ -37,6 +37,10 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "projects/**/README.md"
+    values:
+      nav_exclude: true
 
 exclude:
   - node_modules
@@ -45,3 +49,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - CNAME
+  - _ext/
+  - projects/**/.indexignore
