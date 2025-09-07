@@ -16,15 +16,6 @@ We believe in:
 - **Scalability**: Supporting solutions from single-function devices to facility-wide systems
 - **Community-Driven Development**: Fostering collaboration and knowledge sharing
 
-## Project Structure
-
-Our ecosystem is organized into distinct but interconnected domains:
-
-- **Hardware** (BREADS): Standardized hardware specifications and implementations
-- **Firmware** (FROOTS): Embedded software frameworks and protocols
-- **Middleware** (PROTINS): System integration and device management
-- **Software** (SUGIRS): User interfaces and system control
-
 ## Get Involved
 
 FEASTorg welcomes contributions from developers, engineers, and automation enthusiasts. Visit our [GitHub organization](https://github.com/FEASTorg) to:
