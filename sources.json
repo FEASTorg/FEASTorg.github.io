@@ -6,7 +6,7 @@
             "repo": "FEASTorg/BREADS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/breads",
+            "mount": "breads",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -18,7 +18,7 @@
             "repo": "FEASTorg/FROOTS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/froots",
+            "mount": "froots",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -30,7 +30,7 @@
             "repo": "FEASTorg/PROTINS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/protins",
+            "mount": "protins",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -42,7 +42,7 @@
             "repo": "FEASTorg/SUGIRS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/sugirs",
+            "mount": "sugirs",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -54,7 +54,7 @@
             "repo": "FEASTorg/SLICE",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/slice",
+            "mount": "slice",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -66,7 +66,7 @@
             "repo": "FEASTorg/LOAF",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/loaf",
+            "mount": "loaf",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -78,7 +78,7 @@
             "repo": "FEASTorg/BATCH",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/batch",
+            "mount": "batch",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -90,7 +90,7 @@
             "repo": "FEASTorg/OVEN",
             "ref": "main",
             "subdir": "docs",
-            "mount": "projects/oven",
+            "mount": "oven",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"

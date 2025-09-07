@@ -6,21 +6,19 @@
   url: /posts/
 - title: Site Architecture
   url: /site-architecture/
-- name: Projects
-  children:
-    - name: BREADS
-      url: /projects/breads/
-    - name: FROOTS
-      url: /projects/froots/
-    - name: PROTINS
-      url: /projects/protins/
-    - name: SUGIRS
-      url: /projects/sugirs/
-    - name: SLICE
-      url: /projects/slice/
-    - name: LOAF
-      url: /projects/loaf/
-    - name: BATCH
-      url: /projects/batch/
-    - name: OVEN
-      url: /projects/oven/
+- name: BREADS
+  url: /breads/
+- name: FROOTS
+  url: /froots/
+- name: PROTINS
+  url: /protins/
+- name: SUGIRS
+  url: /sugirs/
+- name: SLICE
+  url: /slice/
+- name: LOAF
+  url: /loaf/
+- name: BATCH
+  url: /batch/
+- name: OVEN
+  url: /oven/
