@@ -2,6 +2,7 @@
 layout: default
 title: Posts
 permalink: /posts/
+nav_order: 3
 ---
 
 Below are our posts and announcements.

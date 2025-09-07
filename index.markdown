@@ -1,9 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Home
+nav_order: 1
 ---
 
 ## Overview
@@ -63,3 +61,9 @@ _**FEAST:** Flexible and Expandable Automation System Technology_
 - [OVEN](/OVEN/)
 
   **Orchestrated Versatile Embedded Network** or _"oven"_ represents the aggregation and coordination of one or more BATCH clusters. Networks multiple BATCH-level systems to a central server for high-level management and monitoring of production scheduling, historical archiving, and facility alerts to achieve broader organizational or operational goals.
+
+### Miscellaneous Concepts
+
+- [VEGIES](/vegies-concept/)
+
+  **Versatile External Gear, Interfaces, and Experimental Subsystems** or _"vegies"_ is a conceptual framework for user-fabricated hardware that can integrate with BREADS-compatible systems. This includes DIY sensors, actuators, and tools made through various fabrication methods like 3D printing, digital manufacturing, and component modification.

@@ -1,16 +1,30 @@
 # TODO
 
-- create sites for all slices automated with kibot
+## Documentation Integration
 
-- add all new ones to site
+- [ ] Consolidate documentation into monorepo
+  - Exclude repositories configured for standalone builds with complex ci
 
-  - Rpi hats
-  - circuit blocks
-  - breakoutpack
-  - protokit
-  - devboarddepot
+## New Project Documentation
 
-- visuals and diagrams
-  - map of repos / org / concept
-  - roadmap
-  - dependancy map
+Add documentation for the following projects:
+
+- [ ] RPi HATs (Raspberry Pi Hardware Attached on Top)
+- [ ] Circuit Blocks
+- [ ] Breakout Pack
+- [ ] ProtoKit
+- [ ] DevBoard Depot
+
+## Visual Documentation
+
+Create visual aids for better project understanding:
+
+- [ ] Repository/Organization Concept Map
+  - Show relationships between projects
+  - Illustrate organizational structure
+- [ ] Project Roadmap
+  - Development timeline
+  - Future milestones
+- [ ] Dependency Map
+  - Project interconnections
+  - Technology stack relationships

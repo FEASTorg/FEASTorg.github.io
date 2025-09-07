@@ -2,17 +2,35 @@
 layout: page
 title: About
 permalink: /about/
+nav_order: 2
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+FEASTorg (Flexible and Expandable Automation System Technology Organization) is an open-source initiative dedicated to creating modular, scalable automation solutions. Our mission is to develop and maintain standardized frameworks that enable seamless integration of hardware, firmware, and software components in automation systems.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## Our Vision
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+We believe in:
 
+- **Open Standards**: Creating accessible, well-documented specifications for automation systems
+- **Modularity**: Enabling plug-and-play compatibility between different system components
+- **Scalability**: Supporting solutions from single-function devices to facility-wide systems
+- **Community-Driven Development**: Fostering collaboration and knowledge sharing
 
-[jekyll-organization]: https://github.com/jekyll
+## Project Structure
+
+Our ecosystem is organized into distinct but interconnected domains:
+
+- **Hardware** (BREADS): Standardized hardware specifications and implementations
+- **Firmware** (FROOTS): Embedded software frameworks and protocols
+- **Middleware** (PROTINS): System integration and device management
+- **Software** (SUGIRS): User interfaces and system control
+
+## Get Involved
+
+FEASTorg welcomes contributions from developers, engineers, and automation enthusiasts. Visit our [GitHub organization](https://github.com/FEASTorg) to:
+
+- Explore our projects
+- Contribute to development
+- Report issues
+- Join discussions
+- Share your implementations

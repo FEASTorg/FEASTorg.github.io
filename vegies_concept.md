@@ -1,31 +1,73 @@
-# VEGIES Concept
+---
+layout: page
+title: VEGIES Concept
+permalink: /vegies-concept/
+---
 
-**_Future..._**
+## Overview
 
-- **VEGIES**: Versatile External Gear, Interfaces, and Experimental Subsystems
+**VEGIES** (Versatile External Gear, Interfaces, and Experimental Subsystems) is a forward-looking concept for extending FEAST capabilities through user-fabricated hardware components.
 
-  - Pronounced like "veggies"
-  - Refers to **off-board, user-fabricated hardware** that can be used in BREADS-compatible systems
-  - Includes sensors, actuators, and tools made or modified by users (e.g., DIY sensors and actuators, additive or other digitally manufactured parts, hacked devices and components)
+> _This is a conceptual framework intended to inspire future development and community contributions._
 
-  - Ideas for implementations:
-    - Handmade thermocouples
-    - DIY pH/ORP/EC probes
-    - DIY optical turbidity sensors using LED + photodiode in 3D printed holder
-    - Capacitive soil moisture sensors with etched foil or PCB traces
-    - Printed or milled strain gauge structures
-    - Homemade load cells using strain gauges on flexures
-    - Thermistor or RTD sensor assemblies in waterproof housings
-    - 3D-printed linear actuators with screw drives or sliders
-    - DIY stepper or brushed motors from recycled components
-    - Custom solenoid valves with 3D printed bodies
-    - Servo/solenoid-driven micro-dispensers for fluids or reagents
-    - Magnetic stirrers or vibratory actuators with scrap coils
-    - Modular sensor mounts and probe holders (3D printed)
-    - Custom wire harnesses, pogo-pin adapters, breakout jigs
-    - Printable mechanical positioning systems for probe insertion
-    - Environmental test enclosures with integrated sensing (e.g. temp/humidity)
-    - Electrochemical cells with swappable electrodes using common components
-    - Low-cost microfluidic chips cut from acrylic or molded in PDMS
-    - DIY cuvettes or optical measurement paths for colorimetry
-    - Textile-based biosensors or conductive gel patches for touch/contact sensing
+## What is VEGIES?
+
+- Pronounced like "veggies"
+- Represents **off-board, user-fabricated hardware** compatible with BREADS systems
+- Encompasses DIY sensors, actuators, and tools created or modified by users
+- Supports various manufacturing methods:
+  - Additive manufacturing (3D printing)
+  - Digital fabrication
+  - Modified commercial components
+  - Custom-built devices
+
+## Potential Implementation Ideas
+
+### Sensing Solutions
+
+#### Temperature & Environmental
+
+- Handmade thermocouples
+- Thermistor/RTD assemblies in waterproof housings
+- Environmental test enclosures with integrated temp/humidity sensing
+
+#### Chemical & Analytical
+
+- DIY pH/ORP/EC probes
+- Optical turbidity sensors (LED + photodiode in 3D printed housing)
+- Electrochemical cells with swappable electrodes
+- DIY cuvettes for colorimetry
+- Low-cost microfluidic chips (acrylic/PDMS)
+
+#### Physical Properties
+
+- Capacitive soil moisture sensors (etched foil/PCB)
+- Printed/milled strain gauge structures
+- Homemade load cells with flexures
+- Textile-based biosensors
+- Contact sensing with conductive gel patches
+
+### Actuation & Control
+
+#### Motion Systems
+
+- 3D-printed linear actuators (screw drives/sliders)
+- DIY stepper/brushed motors (recycled components)
+- Printable mechanical positioning systems
+
+#### Fluid Control
+
+- Custom solenoid valves (3D printed bodies)
+- Servo/solenoid micro-dispensers
+- Magnetic stirrers
+- Vibratory actuators (scrap coils)
+
+### Support Infrastructure
+
+#### Mounting & Integration
+
+- Modular sensor mounts
+- Probe holders (3D printed)
+- Custom wire harnesses
+- Pogo-pin adapters
+- Breakout jigs
