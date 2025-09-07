@@ -6,3 +6,7 @@
   url: /posts/
 - title: Site Architecture
   url: /site-architecture/
+- name: Projects
+  children:
+    - name: BREADS
+      url: /projects/breads/

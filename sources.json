@@ -1,0 +1,11 @@
+{
+    "sources": [
+        {
+            "name": "breads",
+            "repo": "FEASTorg/BREADS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/breads"
+        }
+    ]
+}

@@ -14,17 +14,30 @@ theme: just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
 
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png
 repository: https://github.com/FEASTorg/FEASTorg.github.io
 search: true
 
-# Navigation settings
-nav_enabled: true
-nav_data_file: navigation
+# Relative link fixer
+relative_links:
+  enabled: true
+  collections: true
 
-# Exclude directories and files that should not be published
+# Pretty URLs
+permalink: pretty
+
+# Defaults for imported pages
+defaults:
+  - scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "default"
+
 exclude:
   - node_modules
   - vendor
@@ -32,13 +45,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - CNAME
-
-# Optional front-matter defaults
-defaults:
-  - scope:
-      path: "" # all files
-      type: "posts"
-    values:
-      layout: "post"
-      author: "FEASTorg"
-      comments: true
