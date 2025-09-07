@@ -50,5 +50,4 @@ exclude:
   - README.md
   - CNAME
   - _ext/
-  - **/.indexignore
-
+  - "**/.indexignore"
