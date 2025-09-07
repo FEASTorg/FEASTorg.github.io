@@ -1,9 +1,13 @@
 main:
   - title: Home
     url: /
+    nav_order: 1
   - title: About
     url: /about
+    nav_order: 2
+  - title: Posts
+    url: /posts/
+    nav_order: 3
   - title: Site Architecture
     url: /site-architecture/
-  - title: Blog
-    url: /posts/
+    nav_order: 4
