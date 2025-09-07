@@ -16,7 +16,7 @@ plugins:
   - jekyll-seo-tag
 
 # Just the Docs settings
-logo: /assets/images/cornucopia-feast.png
+logo: /assets/images/cornucopia-feast-banner.png
 repository: https://github.com/FEASTorg/FEASTorg.github.io
 search: true
 navigation:
