@@ -10,3 +10,9 @@
   children:
     - name: BREADS
       url: /projects/breads/
+    - name: FROOTS
+      url: /projects/froots/
+    - name: PROTINS
+      url: /projects/protins/
+    - name: SUGIRS
+      url: /projects/sugirs/

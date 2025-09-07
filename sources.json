@@ -11,6 +11,42 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "froots",
+            "title": "FROOTS",
+            "repo": "FEASTorg/FROOTS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/froots",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "protins",
+            "title": "PROTINS",
+            "repo": "FEASTorg/PROTINS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/protins",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "sugirs",
+            "title": "SUGIRS",
+            "repo": "FEASTorg/SUGIRS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/sugirs",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
