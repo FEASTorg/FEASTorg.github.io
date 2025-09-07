@@ -4,9 +4,7 @@ title: Archives
 permalink: /archives/
 ---
 
-# Archives
-
-Below are the site posts and announcements.
+Below are our posts and announcements.
 
 {% raw %}
 {% for post in site.posts %}
