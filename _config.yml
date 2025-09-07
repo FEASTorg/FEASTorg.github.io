@@ -1,7 +1,7 @@
 title: FEASTorg
 description: >-
   This is the main FEASTorg landing site, with links to each project.
-baseurl: ""         # Hosted at https://feastorg.github.io
+baseurl: "" # Hosted at https://feastorg.github.io
 url: "https://feastorg.github.io"
 
 # Social links
@@ -15,6 +15,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Just the Docs settings
+logo: /assets/images/cornucopia-feast.png
+repository: https://github.com/FEASTorg/FEASTorg.github.io
+search: true
+navigation:
+  data: navigation
+
 # Exclude directories and files that should not be published
 exclude:
   - node_modules
@@ -26,9 +33,8 @@ exclude:
 
 # Optional front-matter defaults
 defaults:
-  -
-    scope:
-      path: ""       # all files
+  - scope:
+      path: "" # all files
       type: "posts"
     values:
       layout: "post"
