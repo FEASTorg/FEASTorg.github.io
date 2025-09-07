@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Archives
-permalink: /archives/
+title: Posts
+permalink: /posts/
 ---
 
 Below are our posts and announcements.
