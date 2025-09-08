@@ -14,6 +14,16 @@ Add documentation for the following projects:
 - [ ] Breakout Pack
 - [ ] ProtoKit
 - [ ] DevBoard Depot
+- [ ] ALL slices based on the slice-infra that was set up
+
+## Integrate Project Documentation
+
+- [ ] KNEEAD clean up and improve UX
+- [ ] Freeboard transfer from personal
+
+## Revise Project Documentation
+
+- [ ] Better expand on all 8 of the Functional Implementation Domains and Hierarchical System Levels
 
 ## Visual Documentation
 
