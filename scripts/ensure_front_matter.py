@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import pathlib
 import re
@@ -8,14 +9,21 @@ import yaml
 root = pathlib.Path(sys.argv[1]).resolve()
 project = os.environ.get("PROJECT_TITLE", root.name).strip()
 md_exts = {".md", ".markdown"}
-fm_re = re.compile(r"^---\s*\n.*?\n---\s*\n", re.S)
+
+# Capture ONLY the YAML between the delimiters
+fm_re = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
 
 
 def split_fm(text: str):
     m = fm_re.match(text)
     if not m:
         return {}, text
-    return yaml.safe_load(m.group(0)) or {}, text[m.end() :]
+    yaml_str = m.group(1)
+    try:
+        data = yaml.safe_load(yaml_str) or {}
+    except Exception:
+        data = {}
+    return data, text[m.end() :]
 
 
 def dump_fm(data: dict, body: str) -> str:
@@ -100,7 +108,6 @@ for p in root.rglob("*"):
             fm.setdefault("grand_parent", project)
             fm.setdefault("parent", section)
 
-    # Hide README when an index exists in same dir
     if p.name.lower() == "readme.md" and (p.parent / "index.md").exists():
         fm["nav_exclude"] = True
 
