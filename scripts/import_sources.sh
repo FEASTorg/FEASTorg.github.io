@@ -4,11 +4,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 manifest="${ROOT:?}/sources.json"
 
-# Hard fail if required tools are missing (no apt on CI)
+# Require tools
 command -v jq >/dev/null    || { echo "jq not found" >&2; exit 1; }
 command -v rsync >/dev/null || { echo "rsync not found" >&2; exit 1; }
 
-mkdir -p "${ROOT:?}/_ext" "${ROOT:?}/projects"
+mkdir -p "${ROOT:?}/_ext"
 
 jq -c '.sources[]' "$manifest" | while IFS= read -r row; do
   name="$(jq -r .name              <<<"$row")"

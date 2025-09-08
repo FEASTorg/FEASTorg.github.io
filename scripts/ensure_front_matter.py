@@ -1,43 +1,62 @@
-#!/usr/bin/env python3
-import os, sys, re, pathlib, yaml
+import os
+import pathlib
+import re
+import sys
+
+import yaml
 
 root = pathlib.Path(sys.argv[1]).resolve()
 project = os.environ.get("PROJECT_TITLE", root.name).strip()
-md = {".md", ".markdown"}
+md_exts = {".md", ".markdown"}
 fm_re = re.compile(r"^---\s*\n.*?\n---\s*\n", re.S)
 
 
-def split_fm(t):
-    m = fm_re.match(t)
-    return (yaml.safe_load(m.group(0)) or {}, t[m.end() :]) if m else ({}, t)
+def split_fm(text: str):
+    m = fm_re.match(text)
+    if not m:
+        return {}, text
+    return yaml.safe_load(m.group(0)) or {}, text[m.end() :]
 
 
-def dump_fm(d, body):
-    return f"---\n{yaml.safe_dump(d, sort_keys=False)}---\n\n{body}"
+def dump_fm(data: dict, body: str) -> str:
+    return f"---\n{yaml.safe_dump(data, sort_keys=False)}---\n\n{body}"
 
 
-def h1(body):
+def first_h1(body: str):
     for ln in body.splitlines():
         m = re.match(r"^\s{0,3}#\s+(.+?)\s*$", ln)
         if m:
             return m.group(1).strip()
 
 
-# Parent landing page
+# 1) Ensure hub index exists and is a section page
 hub = root / "index.md"
-if not hub.exists():
+if hub.exists():
+    txt = hub.read_text(encoding="utf-8", errors="ignore")
+    fm, body = split_fm(txt)
+    fm.setdefault("layout", "default")
+    fm.setdefault("title", fm.get("title") or first_h1(body) or project)
+    fm["has_children"] = True
+    hub.write_text(dump_fm(fm, body), encoding="utf-8")
+else:
     hub.write_text(
-        f"---\nlayout: default\ntitle: {project}\nnav_order: 20\nhas_children: true\npermalink: /{root.relative_to(root.parents[list(root.parts).index('projects')]).as_posix()}/\n---\n",
+        dump_fm(
+            {
+                "layout": "default",
+                "title": project,
+                "nav_order": 20,
+                "has_children": True,
+            },
+            f"# {project}\n\n",
+        ),
         encoding="utf-8",
     )
 
+# 2) Walk pages and assign grouping
 for p in root.rglob("*"):
-    if not p.is_file() or p.suffix.lower() not in md:
+    if not p.is_file() or p.suffix.lower() not in md_exts:
         continue
-    if p.samefile(hub):  # ensure hub stays a section
-        fm, body = split_fm(p.read_text(encoding="utf-8", errors="ignore"))
-        fm["has_children"] = True
-        p.write_text(dump_fm(fm, body), encoding="utf-8")
+    if p.samefile(hub):
         continue
 
     txt = p.read_text(encoding="utf-8", errors="ignore")
@@ -45,7 +64,7 @@ for p in root.rglob("*"):
     fm.setdefault("layout", "default")
     fm["title"] = (
         fm.get("title")
-        or h1(body)
+        or first_h1(body)
         or p.stem.replace("_", " ").replace("-", " ").title()
     )
 
@@ -53,16 +72,35 @@ for p in root.rglob("*"):
     if rel.parent == pathlib.Path("."):
         fm.setdefault("parent", project)
     else:
-        sec = rel.parts[0].replace("_", " ").replace("-", " ").title()
-        sec_index = p.parents[0] / "index.md"
+        section = rel.parts[0].replace("_", " ").replace("-", " ").title()
+        sec_index = root / rel.parts[0] / "index.md"
         if not sec_index.exists():
             sec_index.write_text(
-                f"---\nlayout: default\ntitle: {sec}\nhas_children: true\nparent: {project}\n---\n",
+                dump_fm(
+                    {
+                        "layout": "default",
+                        "title": section,
+                        "has_children": True,
+                        "parent": project,
+                    },
+                    f"# {section}\n\n",
+                ),
                 encoding="utf-8",
             )
-        fm.setdefault("grand_parent", project)
-        fm.setdefault("parent", sec)
+        else:
+            s_txt = sec_index.read_text(encoding="utf-8", errors="ignore")
+            s_fm, s_body = split_fm(s_txt)
+            s_fm.setdefault("layout", "default")
+            s_fm.setdefault("title", section)
+            s_fm["has_children"] = True
+            s_fm.setdefault("parent", project)
+            sec_index.write_text(dump_fm(s_fm, s_body), encoding="utf-8")
 
+        if p.name != "index.md":
+            fm.setdefault("grand_parent", project)
+            fm.setdefault("parent", section)
+
+    # Hide README when an index exists in same dir
     if p.name.lower() == "readme.md" and (p.parent / "index.md").exists():
         fm["nav_exclude"] = True
 

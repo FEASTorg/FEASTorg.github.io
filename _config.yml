@@ -42,6 +42,7 @@ defaults:
     values:
       nav_exclude: true
 
+# Files and directories to exclude from processing
 exclude:
   - node_modules
   - vendor
