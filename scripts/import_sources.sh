@@ -55,6 +55,10 @@ jq -c '.sources[]' "$manifest" | while IFS= read -r row; do
     "${SRC_ABS%/}/" "${MOUNT_ABS%/}/"
   echo "::endgroup::"
 
+  # Debug: list imported markdown
+  echo "Imported files in ${mount}:"
+  find "${MOUNT_ABS}" -maxdepth 1 -type f -name '*.md' -printf '  %P\n' | sort || true
+
   echo "::group::Normalize front matter for $mount"
   PROJECT_TITLE="$title" python3 "$ROOT/scripts/ensure_front_matter.py" "$MOUNT_ABS"
   echo "::endgroup::"
