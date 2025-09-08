@@ -10,15 +10,15 @@ Welcome to _**FEAST:** Flexible and Expandable Automation System Technology_.
 
 ### Supporting Resources & Tools
 
-- [KiCad-Master-Lib](/KiCad-Master-Lib/)
+- [KiCad-Master-Lib](/kicad-master-lib/)
 
   **KiCad-Master-Lib** is a centralized and curated library of schematic symbols, PCB footprints, and 3D models for use with KiCad.
 
-- [KiCad-Hierarchical-Designs](/KiCad-Hierarchical-Designs/)
+- [KiCad-Hierarchical-Designs](/kicad-hierarchical-designs/)
 
   **KiCad-Hierarchical-Designs** provides reference designs demonstrating best practices for hierarchical schematic structures and modular PCB design in KiCad.
 
-- [KiCad-Simulation-Examples](/KiCad-Simulation-Examples/)
+- [KiCad-Simulation-Examples](/kicad-simulation-examples/)
 
   **KiCad-Simulation-Examples** is a collection of simulation-ready examples and tutorials for circuit validation and analysis using KiCad’s integrated simulation features.
 
