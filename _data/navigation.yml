@@ -22,3 +22,9 @@
   url: /batch/
 - name: OVEN
   url: /oven/
+- name: KiCad-Hierarchical-Designs
+  url: /kicad-hierarchical-designs/
+- name: KiCad-Simulation-Examples
+  url: /kicad-simulation-examples/
+- name: KiCad-Master-Lib
+  url: /kicad-master-lib/

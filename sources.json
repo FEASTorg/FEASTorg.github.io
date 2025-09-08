@@ -95,6 +95,42 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "kicad-hierarchical-designs",
+            "title": "KiCad Hierarchical Designs",
+            "repo": "FEASTorg/KiCad-Hierarchical-Designs",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "kicad-hierarchical-designs",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "kicad-simulation-examples",
+            "title": "KiCad Simulation Examples",
+            "repo": "FEASTorg/KiCad-Simulation-Examples",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "kicad-simulation-examples",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "kicad-master-lib",
+            "title": "KiCad Master Lib",
+            "repo": "FEASTorg/KiCad-Master-Lib",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "kicad-master-lib",
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
