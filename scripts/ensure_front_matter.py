@@ -1,99 +1,177 @@
 #!/usr/bin/env python3
+"""
+Ensure Jekyll front matter for imported Markdown content.
+
+Behavior (intentionally minimal and idempotent):
+- Creates/updates a hub index.md in the given root with:
+  layout: default, title: PROJECT_TITLE (forced), has_children: true
+  Removes any parent/grand_parent on the hub page.
+- For each Markdown file under root:
+  * Adds minimal front matter if missing.
+  * Derives title from existing front matter, first H1, or filename.
+  * Top-level pages get parent: PROJECT_TITLE.
+  * Subdirectory pages:
+      - Ensure a section index.md exists with has_children: true,
+        layout: default, title = section name (forced), parent = PROJECT_TITLE.
+      - Child pages get grand_parent: PROJECT_TITLE and parent: <Section>.
+  * README.md is excluded from nav when an index.md exists in the same directory.
+
+Input:
+- argv[1]: path to the project mount directory (e.g., "breads")
+- Env: PROJECT_TITLE (optional). Defaults to the directory name.
+
+Outputs:
+- Rewrites Markdown files in-place with normalized front matter.
+"""
+
+from __future__ import annotations
+
 import os
-import pathlib
 import re
 import sys
+from pathlib import Path
+from typing import Dict, Tuple, Optional
+
 import yaml
 
-root = pathlib.Path(sys.argv[1]).resolve()
-project = os.environ.get("PROJECT_TITLE", root.name).strip()
-md_exts = {".md", ".markdown"}
+# Markdown extensions we normalize
+MARKDOWN_EXTS = {".md", ".markdown"}
 
-# Capture ONLY the YAML between the delimiters
-fm_re = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
+# Front matter regex: capture ONLY the YAML content between delimiters.
+_FRONT_MATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
+
+# Heading regex: first Markdown H1
+_H1_RE = re.compile(r"^\s{0,3}#\s+(.+?)\s*$")
 
 
-def split_fm(text: str):
-    m = fm_re.match(text)
+def split_front_matter(text: str) -> Tuple[Dict, str]:
+    """Return (front_matter_dict, body) for a Markdown document."""
+    m = _FRONT_MATTER_RE.match(text)
     if not m:
         return {}, text
     yaml_str = m.group(1)
     try:
         data = yaml.safe_load(yaml_str) or {}
-    except Exception:
+    except (yaml.YAMLError, ValueError):
         data = {}
     return data, text[m.end() :]
 
 
-def dump_fm(data: dict, body: str) -> str:
+def dump_front_matter(data: Dict, body: str) -> str:
+    """Render a Markdown document from front matter dict and body."""
     return f"---\n{yaml.safe_dump(data, sort_keys=False)}---\n\n{body}"
 
 
-def first_h1(body: str):
-    for ln in body.splitlines():
-        m = re.match(r"^\s{0,3}#\s+(.+?)\s*$", ln)
+def first_h1(body: str) -> Optional[str]:
+    """Return the first H1 text from body, if any."""
+    for line in body.splitlines():
+        m = _H1_RE.match(line)
         if m:
             return m.group(1).strip()
+    return None
 
 
-# 1) Ensure hub index exists and is a section page with canonical title
-hub = root / "index.md"
-if hub.exists():
-    txt = hub.read_text(encoding="utf-8", errors="ignore")
-    fm, body = split_fm(txt)
-else:
-    fm, body = {}, f"# {project}\n\n"
+def titleize(filename: str) -> str:
+    """Derive a human title from a filename."""
+    stem = Path(filename).stem
+    return stem.replace("_", " ").replace("-", " ").title()
 
-fm["layout"] = fm.get("layout") or "default"
-fm["title"] = project  # force exact title for parent matching
-fm["has_children"] = True
-fm.pop("parent", None)  # hub must not be a child
-fm.pop("grand_parent", None)
-hub.write_text(dump_fm(fm, body), encoding="utf-8")
 
-# 2) Walk pages and assign grouping
-for p in root.rglob("*"):
-    if not p.is_file() or p.suffix.lower() not in md_exts:
-        continue
-    if p.samefile(hub):
-        continue
-
-    txt = p.read_text(encoding="utf-8", errors="ignore")
-    fm, body = split_fm(txt)
-    fm.setdefault("layout", "default")
-    fm["title"] = (
-        fm.get("title")
-        or first_h1(body)
-        or p.stem.replace("_", " ").replace("-", " ").title()
-    )
-
-    rel = p.relative_to(root)
-    if rel.parent == pathlib.Path("."):
-        # direct child of hub
-        fm.setdefault("parent", project)
+def ensure_hub_index(root: Path, project_title: str) -> Path:
+    """Create or normalize the hub index.md under root."""
+    hub = root / "index.md"
+    if hub.exists():
+        txt = hub.read_text(encoding="utf-8", errors="ignore")
+        fm, body = split_front_matter(txt)
     else:
-        # section handling
-        section = rel.parts[0].replace("_", " ").replace("-", " ").title()
-        sec_index = root / rel.parts[0] / "index.md"
+        fm, body = {}, f"# {project_title}\n\n"
 
-        if sec_index.exists():
-            s_txt = sec_index.read_text(encoding="utf-8", errors="ignore")
-            s_fm, s_body = split_fm(s_txt)
-        else:
-            s_fm, s_body = {}, f"# {section}\n\n"
+    # Canonicalize hub metadata
+    fm["layout"] = fm.get("layout") or "default"
+    fm["title"] = (
+        project_title  # exact match required by Just the Docs for parent linking
+    )
+    fm["has_children"] = True
+    fm.pop("parent", None)
+    fm.pop("grand_parent", None)
 
-        s_fm["layout"] = s_fm.get("layout") or "default"
-        s_fm["title"] = section  # force exact section title
-        s_fm["has_children"] = True
-        s_fm["parent"] = project  # ensure linked to hub
-        sec_index.write_text(dump_fm(s_fm, s_body), encoding="utf-8")
+    hub.write_text(dump_front_matter(fm, body), encoding="utf-8")
+    return hub
 
-        if p.name != "index.md":
-            fm.setdefault("grand_parent", project)
-            fm.setdefault("parent", section)
 
-    # Hide README when an index exists in same dir
-    if p.name.lower() == "readme.md" and (p.parent / "index.md").exists():
+def ensure_section_index(
+    section_dir: Path, project_title: str, section_title: str
+) -> None:
+    """Create or normalize a section index.md for a subdirectory."""
+    sec_index = section_dir / "index.md"
+    if sec_index.exists():
+        txt = sec_index.read_text(encoding="utf-8", errors="ignore")
+        s_fm, s_body = split_front_matter(txt)
+    else:
+        s_fm, s_body = {}, f"# {section_title}\n\n"
+
+    s_fm["layout"] = s_fm.get("layout") or "default"
+    s_fm["title"] = section_title
+    s_fm["has_children"] = True
+    s_fm["parent"] = project_title
+
+    sec_index.write_text(dump_front_matter(s_fm, s_body), encoding="utf-8")
+
+
+def process_page(root: Path, hub: Path, project_title: str, page_path: Path) -> None:
+    """Normalize one Markdown page's front matter and grouping."""
+    if not page_path.is_file() or page_path.suffix.lower() not in MARKDOWN_EXTS:
+        return
+    if page_path.samefile(hub):
+        return
+
+    txt = page_path.read_text(encoding="utf-8", errors="ignore")
+    fm, body = split_front_matter(txt)
+
+    # Required basics
+    fm.setdefault("layout", "default")
+    fm["title"] = fm.get("title") or first_h1(body) or titleize(page_path.name)
+
+    # Grouping
+    rel = page_path.relative_to(root)
+    if rel.parent == Path("."):
+        # Top-level child of hub
+        fm.setdefault("parent", project_title)
+    else:
+        # Section children
+        section_slug = rel.parts[0]
+        section_title = section_slug.replace("_", " ").replace("-", " ").title()
+        ensure_section_index(root / section_slug, project_title, section_title)
+
+        if page_path.name != "index.md":
+            fm.setdefault("grand_parent", project_title)
+            fm.setdefault("parent", section_title)
+
+    # Hide README when an index exists alongside it
+    if (
+        page_path.name.lower() == "readme.md"
+        and (page_path.parent / "index.md").exists()
+    ):
         fm["nav_exclude"] = True
 
-    p.write_text(dump_fm(fm, body), encoding="utf-8")
+    page_path.write_text(dump_front_matter(fm, body), encoding="utf-8")
+
+
+def main(argv: list[str]) -> int:
+    if len(argv) < 2:
+        sys.stderr.write("usage: ensure_front_matter.py <root-dir>\n")
+        return 2
+
+    root = Path(argv[1]).resolve()
+    project_title = os.environ.get("PROJECT_TITLE", root.name).strip() or root.name
+
+    hub = ensure_hub_index(root, project_title)
+
+    for path in root.rglob("*"):
+        process_page(root, hub, project_title, path)
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
