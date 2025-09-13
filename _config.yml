@@ -31,24 +31,24 @@ plugins:
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png
 repository: https://github.com/FEASTorg/FEASTorg.github.io
-search: true
 color_scheme: feast
-callouts_level: quiet # or loud
-callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: feast-growth
-  note:
-    title: Note
-    color: feast-accent
-  warning:
-    title: Warning
-    color: red
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 2
+  preview_words_before: 3
+  preview_words_after: 3
+  # Allow hyphenated terms (e.g., KiCad-Master-Lib)
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+enable_copy_code_button: true
+heading_anchors: true
+nav_error_report: true
+aux_links:
+  "FEASTorg on GitHub":
+    - "https://github.com/FEASTorg"
+aux_links_new_tab: false
 
 # Relative link fixer
 relative_links:
@@ -114,6 +114,23 @@ defaults:
       layout: "default"
       parent: "Developer Resources"
       nav_exclude: false
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: feast-growth
+  note:
+    title: Note
+    color: feast-accent
+  warning:
+    title: Warning
+    color: red
 
 # Files and directories to exclude from processing
 exclude:
