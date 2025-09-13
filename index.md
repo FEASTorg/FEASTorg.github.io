@@ -5,13 +5,21 @@ nav_order: 1
 description: "FEAST is an open-source industrial automation framework that combines hardware, firmware, middleware, and software into a unified, scalable system for modern automation needs."
 ---
 
-## Welcome to FEAST
+<!-- DO NOT APPLY AUTO FORMATTING THIS DOCUMENT AS IT RUINS THE JTD ELEMENTS -->
 
-**Flexible and Expandable Automation System Technology** is an open-source framework designed to democratize industrial automation through modular, interoperable components that scale from simple sensors to complex manufacturing systems.
+# Flexible and Expandable Automation System Technology
+{: .fs-9 }
+
+FEAST is an open-source framework designed to democratize industrial automation through modular, interoperable components that scale from simple sensors to complex manufacturing systems.
+{: .fs-6 .fw-300 }
 
 [Get Started](/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub][FEASTorg Github]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
+---
+
+{: .warning }
+> This project is in its infancy and under heavy development. Specifications, APIs, and documentation are subject to change. See [CHANGELOG]({% link CHANGELOG.md %}) for current development status and updates.
 ---
 
 ## What is FEAST?
