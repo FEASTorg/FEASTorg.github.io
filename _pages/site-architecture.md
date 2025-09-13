@@ -2,7 +2,7 @@
 layout: page
 title: Site Architecture
 permalink: /site-architecture/
-nav_order: 4
+nav_order: 13
 ---
 
 ## Overview
@@ -17,7 +17,7 @@ This site is built using [Jekyll](https://jekyllrb.com/), a static site generato
 - **Source Control**: All source code is maintained on [GitHub](https://github.com/FEASTorg)
 - **Hosting**: Deployed via GitHub Pages at [feastorg.github.io](https://feastorg.github.io)
 
-### Development Resources
+### Developer Resources
 
 For contributors working on site improvements:
 

@@ -1,0 +1,49 @@
+// Custom scheme based on the built-in "light" scheme.
+// Unset variables inherit defaults from the light scheme.
+// NOTE TO DEVELOPERS: Keep all variables listed i.e.:
+// mark CHANGED vs DEFAULT, include default in comments.
+
+@import "custom/tokens"; // ensure tokens are visible here
+
+// Required
+$color-scheme: feast;
+
+// ── Text and headings ──────────────────────────────────────────────────────────
+// CHANGED: Use feast primary -400 for body text (consistent with color scale)
+$body-text-color: $feast-primary-400;
+// DEFAULT: $body-background-color: $white;
+// CHANGED: Use feast primary for headings (stronger hierarchy)
+$body-heading-color: $feast-primary-200;
+
+// ── Links and accents ─────────────────────────────────────────────────────────
+// CHANGED: Use feast primary for links (brand consistency)
+$link-color: $feast-primary-100;
+// CHANGED: Use feast accent for primary buttons (call-to-action)
+$btn-primary-color: $feast-accent-100;
+
+// ── UI surfaces ───────────────────────────────────────────────────────────────
+// CHANGED: Use feast surface for sidebar (cleaner, warmer)
+$sidebar-color: $feast-surface;
+// CHANGED: Use feast surface for buttons (consistency)
+$base-button-color: $feast-surface;
+// CHANGED: Use feast surface for code (consistency)
+$code-background-color: $feast-surface;
+// CHANGED: Darken feast surface for feedback (subtle depth)
+$feedback-color: darken($feast-surface, 3%);
+// DEFAULT: $table-background-color: $white;
+// DEFAULT: $search-background-color: $white;
+// CHANGED: Use feast muted text for search preview (hierarchy)
+$search-result-preview-color: $feast-text-muted;
+// CHANGED: Use feast muted text for nav children (hierarchy)
+$nav-child-link-color: $feast-text-muted;
+
+// ── Borders and structure ─────────────────────────────────────────────────────
+// CHANGED: Use feast border for cleaner structure
+$border-color: $feast-border;
+
+// ── Table styling ─────────────────────────────────────────────────────────────
+// CHANGED: Use feast surface for table backgrounds (consistency)
+$table-background-color: $feast-surface;
+
+// Syntax highlighting for light theme
+@import "./vendor/OneLightJekyll/syntax";

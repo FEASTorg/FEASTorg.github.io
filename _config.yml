@@ -4,10 +4,21 @@ description: >-
 baseurl: "" # Hosted at https://feastorg.github.io
 url: "https://feastorg.github.io"
 
+# SEO and metadata
+author: FEASTorg
+keywords: "automation, FEAST, IoT, industrial automation, hardware, firmware, middleware, software"
+lang: en-US
+
 # Social links
 twitter_username: FEASTorg
 github_username: FEASTorg
 email: contact@feastorg.org
+
+# Social metadata
+social:
+  name: FEASTorg
+  links:
+    - https://github.com/FEASTorg
 
 # Theme and plugins
 theme: just-the-docs
@@ -21,6 +32,23 @@ plugins:
 logo: /assets/images/cornucopia-feast-banner.png
 repository: https://github.com/FEASTorg/FEASTorg.github.io
 search: true
+color_scheme: feast
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: feast-growth
+  note:
+    title: Note
+    color: feast-accent
+  warning:
+    title: Warning
+    color: red
 
 # Relative link fixer
 relative_links:
@@ -30,17 +58,58 @@ relative_links:
 # Pretty URLs
 permalink: pretty
 
-# Defaults for imported pages
+# Include the _pages directory
+include:
+  - _pages
+
+# Enhanced defaults for better organization
 defaults:
   - scope:
-      path: ""
+      path: "_pages"
       type: "pages"
     values:
       layout: "default"
   - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "getting-started"
+      type: "pages"
+    values:
+      layout: "default"
+      parent: "Getting Started"
+  - scope:
+      path: "usage"
+      type: "pages"
+    values:
+      layout: "default"
+      parent: "Usage"
+  - scope:
       path: "**/README.md"
     values:
       nav_exclude: true
+  - scope:
+      path: "implementation-domain/**"
+    values:
+      layout: "default"
+      nav_exclude: false
+  - scope:
+      path: "system-levels/**"
+    values:
+      layout: "default"
+      nav_exclude: false
+  - scope:
+      path: "development/**"
+    values:
+      layout: "default"
+      nav_exclude: false
+  - scope:
+      path: "developer-resources/**"
+    values:
+      layout: "default"
+      nav_exclude: false
 
 # Files and directories to exclude from processing
 exclude:
@@ -52,3 +121,6 @@ exclude:
   - CNAME
   - _ext/
   - "**/.indexignore"
+  - TODO.md
+  - .git/
+  - .github/

@@ -1,0 +1,24 @@
+// ── FEASTorg Brand Colors ──────────────────────────────────────────────────────
+// Feast primary color scale (deep engineering blue)
+$feast-primary-000: #3498db; // Lightest - subtle backgrounds, hover states
+$feast-primary-100: #2980b9; // Light - secondary buttons, links
+$feast-primary-200: #1e4d6b; // Medium - primary buttons, headings (original)
+$feast-primary-300: #154156; // Dark - emphasis, active states
+$feast-primary-400: #233241; // Extra dark - body text, high contrast
+
+// Feast accent color scale (warm harvest orange)
+$feast-accent-000: #f39c12; // Lightest - warnings, highlights
+$feast-accent-100: #e67e22; // Light - primary accent, buttons
+$feast-accent-200: #d35400; // Medium - active states, emphasis
+$feast-accent-300: #a04000; // Darkest - borders, secondary accent
+
+// Feast growth color scale (natural automation green)
+$feast-growth-000: #2ecc71; // Lightest - success messages, highlights
+$feast-growth-100: #27ae60; // Light - primary success, indicators
+$feast-growth-200: #229954; // Medium - active success states
+$feast-growth-300: #196f3d; // Darkest - borders, secondary success
+
+// Neutral & whites greys for surfaces, text, borders
+$feast-surface: #f8f9fa; // Clean surface grey (precision, clarity)
+$feast-text-muted: #6c757d; // Muted text (secondary information)
+$feast-border: #dee2e6; // Subtle border grey (clean separation)

@@ -1,30 +1,27 @@
-- title: Home
-  url: /
-- title: About
-  url: /about
-- title: Posts
-  url: /posts/
-- title: Site Architecture
-  url: /site-architecture/
-- name: BREADS
-  url: /breads/
-- name: FROOTS
-  url: /froots/
-- name: PROTINS
-  url: /protins/
-- name: SUGIRS
-  url: /sugirs/
-- name: SLICE
-  url: /slice/
-- name: LOAF
-  url: /loaf/
-- name: BATCH
-  url: /batch/
-- name: OVEN
-  url: /oven/
-- name: KiCad-Hierarchical-Designs
-  url: /kicad-hierarchical-designs/
-- name: KiCad-Simulation-Examples
-  url: /kicad-simulation-examples/
-- name: KiCad-Master-Lib
-  url: /kicad-master-lib/
+# Navigation is handled automatically by Just the Docs theme
+# using the nav_order, parent, and has_children properties in page front matter
+
+# External project links (imported content)
+external_links:
+  - name: BREADS
+    url: /implementation-domain/breads/
+  - name: FROOTS
+    url: /implementation-domain/froots/
+  - name: PROTINS
+    url: /implementation-domain/protins/
+  - name: SUGIRS
+    url: /implementation-domain/sugirs/
+  - name: SLICE
+    url: /system-levels/slice/
+  - name: LOAF
+    url: /system-levels/loaf/
+  - name: BATCH
+    url: /system-levels/batch/
+  - name: OVEN
+    url: /system-levels/oven/
+  - name: KiCad-Master-Lib
+    url: /developer-resources/kicad-master-lib/
+  - name: KiCad-Hierarchical-Designs
+    url: /developer-resources/kicad-hierarchical-designs/
+  - name: KiCad-Simulation-Examples
+    url: /developer-resources/kicad-simulation-examples/

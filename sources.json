@@ -6,7 +6,7 @@
             "repo": "FEASTorg/BREADS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "breads",
+            "mount": "implementation-domain/breads",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -18,7 +18,7 @@
             "repo": "FEASTorg/FROOTS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "froots",
+            "mount": "implementation-domain/froots",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -30,7 +30,7 @@
             "repo": "FEASTorg/PROTINS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "protins",
+            "mount": "implementation-domain/protins",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -42,7 +42,7 @@
             "repo": "FEASTorg/SUGIRS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "sugirs",
+            "mount": "implementation-domain/sugirs",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -54,7 +54,7 @@
             "repo": "FEASTorg/SLICE",
             "ref": "main",
             "subdir": "docs",
-            "mount": "slice",
+            "mount": "system-levels/slice",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -66,7 +66,7 @@
             "repo": "FEASTorg/LOAF",
             "ref": "main",
             "subdir": "docs",
-            "mount": "loaf",
+            "mount": "system-levels/loaf",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -78,7 +78,7 @@
             "repo": "FEASTorg/BATCH",
             "ref": "main",
             "subdir": "docs",
-            "mount": "batch",
+            "mount": "system-levels/batch",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -90,7 +90,7 @@
             "repo": "FEASTorg/OVEN",
             "ref": "main",
             "subdir": "docs",
-            "mount": "oven",
+            "mount": "system-levels/oven",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -102,7 +102,7 @@
             "repo": "FEASTorg/KiCad-Hierarchical-Designs",
             "ref": "main",
             "subdir": "docs",
-            "mount": "kicad-hierarchical-designs",
+            "mount": "developer-resources/kicad-hierarchical-designs",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -114,7 +114,7 @@
             "repo": "FEASTorg/KiCad-Simulation-Examples",
             "ref": "main",
             "subdir": "docs",
-            "mount": "kicad-simulation-examples",
+            "mount": "developer-resources/kicad-simulation-examples",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -126,7 +126,7 @@
             "repo": "FEASTorg/KiCad-Master-Lib",
             "ref": "main",
             "subdir": "docs",
-            "mount": "kicad-master-lib",
+            "mount": "developer-resources/kicad-master-lib",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
