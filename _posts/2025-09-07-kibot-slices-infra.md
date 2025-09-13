@@ -2,7 +2,6 @@
 layout: post
 title: "Reusable KiBot → Pages slice pipeline MVP rolls out!"
 date: 2025-09-07 17:18:45 -0400
-categories: development
 author: Cameron K. Brooks
 ---
 

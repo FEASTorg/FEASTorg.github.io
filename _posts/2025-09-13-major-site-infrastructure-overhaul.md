@@ -2,7 +2,6 @@
 layout: post
 title: "Site Infrastructure Overhaul"
 date: 2025-09-13 22:55:00 -0400
-categories: [infrastructure, documentation]
 author: Cameron K. Brooks
 ---
 

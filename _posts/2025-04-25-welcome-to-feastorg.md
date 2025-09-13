@@ -2,7 +2,6 @@
 layout: post
 title: "Welcome to FEASTorg"
 date: 2025-04-25 15:05:39 -0400
-categories: announcement
 author: Cameron K. Brooks
 ---
 
