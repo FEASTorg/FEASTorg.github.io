@@ -19,7 +19,8 @@ FEAST is an open-source framework designed to democratize industrial automation 
 ---
 
 {: .warning }
-> This project is in its infancy and under heavy development. Specifications, APIs, and documentation are subject to change. See [CHANGELOG]({% link CHANGELOG.md %}) for current development status and updates.
+> This project is in an early stage and under active development. Specifications, APIs, hardware implementations, documentation, and any other content may change at any time.
+
 ---
 
 ## What is FEAST?
