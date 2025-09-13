@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Site Infrastructure Overhaul"
-date: 2025-09-13 22:55:00 -0400
+date: 2025-09-13 18:55:00 -0400
 author: Cameron K. Brooks
 ---
 
