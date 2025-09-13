@@ -46,39 +46,11 @@ Familiarize yourself with the [Functional Implementation Domains](/implementatio
 
 ### 3. Choose Your Contribution Area
 
-- **Hardware**: Contribute to BREADS specifications and implementations
-- **Firmware**: Develop FROOTS-compatible firmware modules
-- **Middleware**: Build PROTINS orchestration components
-- **Software**: Create SUGIRS interface applications
+- **Hardware**: Contribute to specifications and implementations
+- **Firmware**: Develop compatible firmware modules
+- **Middleware**: Build orchestration components
+- **Software**: Create interface applications
 - **Documentation**: Improve guides, tutorials, and references
-
-## Development Guidelines
-
-### Code Standards
-
-- Follow established coding conventions for each project
-- Include comprehensive tests with new features
-- Document your code clearly and thoroughly
-- Ensure compatibility with existing FEAST components
-
-### Pull Request Process
-
-1. Fork the relevant repository
-2. Create a feature branch from the main branch
-3. Make your changes with clear, descriptive commits
-4. Test your changes thoroughly
-5. Submit a pull request with detailed description
-6. Respond to review feedback promptly
-
-### Issue Reporting
-
-When reporting issues, please include:
-
-- Clear description of the problem
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Environment details (OS, versions, etc.)
-- Relevant logs or error messages
 
 ## Recognition
 
