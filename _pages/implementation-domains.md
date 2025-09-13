@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Functional Implementation Domains
+title: Implementation Domains
 permalink: /implementation-domains/
 nav_order: 7
 has_children: true
 ---
 
-Currently, FEAST defines several **functional implementation domains** to organize its architecture and development. These domains include:
-
 ### Functional Implementation Domains
+
+Currently, FEAST defines several **functional implementation domains** to organize its architecture and development. These domains include:
 
 - [BREADS](/breads/)
 

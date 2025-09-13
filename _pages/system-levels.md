@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Hierarchical System Levels
+title: System Levels
 permalink: /system-levels/
 nav_order: 8
 has_children: true
 ---
+
+## Hierarchical System Levels
 
 Currently, FEAST defines several **hierarchical system levels** to organize its architecture and functionality. These levels include:
 

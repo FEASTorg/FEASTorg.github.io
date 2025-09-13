@@ -94,13 +94,13 @@ defaults:
       path: "implementation-domains/**"
     values:
       layout: "default"
-      parent: "Functional Implementation Domains"
+      parent: "Implementation Domains"
       nav_exclude: false
   - scope:
       path: "system-levels/**"
     values:
       layout: "default"
-      parent: "Hierarchical System Levels"
+      parent: "System Levels"
       nav_exclude: false
   - scope:
       path: "development/**"
