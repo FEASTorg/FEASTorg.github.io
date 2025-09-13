@@ -4,13 +4,13 @@
 # External project links (imported content)
 external_links:
   - name: BREADS
-    url: /implementation-domain/breads/
+    url: /implementation-domains/breads/
   - name: FROOTS
-    url: /implementation-domain/froots/
+    url: /implementation-domains/froots/
   - name: PROTINS
-    url: /implementation-domain/protins/
+    url: /implementation-domains/protins/
   - name: SUGIRS
-    url: /implementation-domain/sugirs/
+    url: /implementation-domains/sugirs/
   - name: SLICE
     url: /system-levels/slice/
   - name: LOAF

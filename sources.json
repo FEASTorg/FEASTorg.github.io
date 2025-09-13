@@ -6,7 +6,7 @@
             "repo": "FEASTorg/BREADS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "implementation-domain/breads",
+            "mount": "implementation-domains/breads",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -18,7 +18,7 @@
             "repo": "FEASTorg/FROOTS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "implementation-domain/froots",
+            "mount": "implementation-domains/froots",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -30,7 +30,7 @@
             "repo": "FEASTorg/PROTINS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "implementation-domain/protins",
+            "mount": "implementation-domains/protins",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -42,7 +42,7 @@
             "repo": "FEASTorg/SUGIRS",
             "ref": "main",
             "subdir": "docs",
-            "mount": "implementation-domain/sugirs",
+            "mount": "implementation-domains/sugirs",
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
