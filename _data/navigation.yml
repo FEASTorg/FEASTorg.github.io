@@ -25,3 +25,7 @@ external_links:
     url: /developer-resources/kicad-hierarchical-designs/
   - name: KiCad-Simulation-Examples
     url: /developer-resources/kicad-simulation-examples/
+  - name: ProtoKit
+    url: /projects/protokit/
+  - name: DevBoardDepot
+    url: /projects/devboarddepot/

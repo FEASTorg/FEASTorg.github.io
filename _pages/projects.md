@@ -2,10 +2,18 @@
 layout: page
 title: Projects
 permalink: /projects/
-nav_order: 6
+nav_order: 11
 has_children: true
 ---
 
-This section will contain documentation for individual FEAST projects and implementations. Content for specific projects will be imported from their respective repositories using our documentation import system.
+## FEAST Projects
 
-> Stay tuned for updates as we expand this section with detailed project information!
+The FEAST ecosystem includes several project repositories that provide tools, resources, and example implementations to support the broader automation framework:
+
+- [ProtoKit](/protokit/)
+
+  **ProtoKit** provides prototyping tools and utilities for rapid development and testing of FEAST-compatible hardware and software components.
+
+- [DevBoardDepot](/devboarddepot/)
+
+  **DevBoardDepot** is a collection of development boards, reference designs, and evaluation platforms that demonstrate FEAST implementation patterns and facilitate system development.
