@@ -7,7 +7,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/breads",
-            "redirects": [
+            "redirect_from": [
                 "/breads/",
                 "/breads"
             ],
@@ -23,7 +23,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/froots",
-            "redirects": [
+            "redirect_from": [
                 "/froots/",
                 "/froots"
             ],
@@ -39,7 +39,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/protins",
-            "redirects": [
+            "redirect_from": [
                 "/protins/",
                 "/protins"
             ],
@@ -55,7 +55,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/sugirs",
-            "redirects": [
+            "redirect_from": [
                 "/sugirs/",
                 "/sugirs"
             ],
@@ -71,7 +71,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/slice",
-            "redirects": [
+            "redirect_from": [
                 "/slice/",
                 "/slice"
             ],
@@ -87,7 +87,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/loaf",
-            "redirects": [
+            "redirect_from": [
                 "/loaf/",
                 "/loaf"
             ],
@@ -103,7 +103,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/batch",
-            "redirects": [
+            "redirect_from": [
                 "/batch/",
                 "/batch"
             ],
@@ -119,7 +119,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/oven",
-            "redirects": [
+            "redirect_from": [
                 "/oven/",
                 "/oven"
             ],
@@ -135,7 +135,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-hierarchical-designs",
-            "redirects": [
+            "redirect_from": [
                 "/kicad-hierarchical-designs/",
                 "/kicad-hierarchical-designs"
             ],
@@ -151,7 +151,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-simulation-examples",
-            "redirects": [
+            "redirect_from": [
                 "/kicad-simulation-examples/",
                 "/kicad-simulation-examples"
             ],
@@ -167,7 +167,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-master-lib",
-            "redirects": [
+            "redirect_from": [
                 "/kicad-master-lib/",
                 "/kicad-master-lib"
             ],
