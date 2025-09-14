@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-nav_order: 11
+nav_order: 6
 has_children: true
 ---
 
@@ -12,8 +12,8 @@ The FEAST ecosystem includes several project repositories that provide tools, re
 
 - [ProtoKit](/protokit/)
 
-  **ProtoKit** provides prototyping tools and utilities for rapid development and testing of FEAST-compatible hardware and software components.
+  **ProtoKit** is an open-source collection of protoboards, stripboards, expansion boards, and layout boards with configured footprints and trace routing. Designed in KiCad to support rapid electronics prototyping and customization.
 
 - [DevBoardDepot](/devboarddepot/)
 
-  **DevBoardDepot** is a collection of development boards, reference designs, and evaluation platforms that demonstrate FEAST implementation patterns and facilitate system development.
+  **DevBoardDepot** is an open-source collection of MCU development boards and kits, designed in KiCad for streamlined embedded development, testing, and prototyping.
