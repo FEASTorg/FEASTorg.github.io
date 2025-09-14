@@ -31,6 +31,7 @@ plugins:
 
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png
+favicon_ico: "/assets/images/favicon.ico"
 repository: https://github.com/FEASTorg/FEASTorg.github.io
 color_scheme: feast
 search_enabled: true
