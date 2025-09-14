@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # scripts/import_sources.sh
 # -----------------------------------------------------------------------------
-# Import external docs into the hub repo.
+# Import remote repository docs into the hub repo.
 #
 # Behavior (idempotent):
 # - For each entry in sources.json:
