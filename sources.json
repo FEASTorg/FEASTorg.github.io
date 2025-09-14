@@ -223,6 +223,38 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "crumbs",
+            "title": "CRUMBS",
+            "repo": "FEASTorg/CRUMBS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/crumbs",
+            "redirect_from": [
+                "/crumbs/",
+                "/crumbs"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "pycrumbs",
+            "title": "pyCRUMBS",
+            "repo": "FEASTorg/pyCRUMBS",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/pycrumbs",
+            "redirect_from": [
+                "/pycrumbs/",
+                "/pycrumbs"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }

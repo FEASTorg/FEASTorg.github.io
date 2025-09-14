@@ -21,3 +21,11 @@ The FEAST ecosystem includes several project repositories that provide tools, re
 - [BreakoutPack](/breakoutpack/)
 
   **BreakoutPack** is an open-source collection of breakout boards for ICs, connectors, sensors, and other components, designed in KiCad to support easy integration and rapid electronics development.
+
+- [CRUMBS](/crumbs/)
+
+  **CRUMBS** Communications Router and Unified Message Broker System (CRUMBS) supports the SPREAD firmware for BREAD.
+
+- [pyCRUMBS](/pycrumbs/)
+
+  **pyCRUMBS** pyCRUMBS is the Python implementation of the CRUMBS protocol for use on Raspberry Pi and other SBCs.
