@@ -10,9 +10,7 @@ keywords: "automation, FEAST, IoT, industrial automation, hardware, firmware, mi
 lang: en-US
 
 # Social links
-twitter_username: FEASTorg
 github_username: FEASTorg
-email: contact@feastorg.org
 
 # Social metadata
 social:
@@ -28,6 +26,7 @@ plugins:
   - jekyll-relative-links
   - jekyll-titles-from-headings
   - jekyll-redirect-from
+  - jekyll-include-cache
 
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png
@@ -43,7 +42,7 @@ search:
   # Allow hyphenated terms (e.g., KiCad-Master-Lib)
   tokenizer_separator: /[\s/]+/
   rel_url: true
-  button: false
+  button: true
 enable_copy_code_button: true
 heading_anchors: true
 nav_error_report: true
