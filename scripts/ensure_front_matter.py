@@ -203,7 +203,13 @@ def main(argv: list[str]) -> int:
     # Create redirect stubs if any redirects are specified
     if redirects:
         # Determine the target path relative to site root
-        site_root = root.parent  # Go up from mounted directory to site root
+        # root is something like /path/to/site/implementation-domains/breads
+        # We need to get back to the site root and then get the relative mount path
+
+        # Find the site root by going up until we find _config.yml or assume 2 levels up
+        site_root = (
+            root.parent.parent
+        )  # Go up two levels: breads -> implementation-domains -> site_root
         relative_mount = root.relative_to(site_root)
         create_redirect_stubs(redirects, str(relative_mount), site_root)
 
