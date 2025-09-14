@@ -43,6 +43,4 @@ FEAST provides a comprehensive ecosystem for industrial automation that bridges 
 
 Ready to join the FEAST community? Check out the [Development](/development/) and [Contributing](/contributing/) pages to learn how you can participate in shaping the future of industrial automation.
 
----
-
 [FEASTorg Github]: https://github.com/FEASTorg
