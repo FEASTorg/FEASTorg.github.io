@@ -1,0 +1,24 @@
+{
+    "external_projects": [
+        {
+            "name": "Slice_TEMP",
+            "title": "Slice TEMP",
+            "url": "/Slice_TEMP/"
+        },
+        {
+            "name": "Slice_DCMT",
+            "title": "Slice DCMT",
+            "url": "/Slice_DCMT/"
+        },
+        {
+            "name": "can-nano-shield",
+            "title": "CAN Nano Shield",
+            "url": "/can-nano-shield/"
+        },
+        {
+            "name": "can-nano-shield-fieldbus",
+            "title": "CAN Nano Fieldbus",
+            "url": "/can-nano-shield-fieldbus/"
+        }
+    ]
+}

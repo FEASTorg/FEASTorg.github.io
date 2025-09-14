@@ -36,6 +36,9 @@ jobs:
       - name: Import external docs
         run: bash scripts/import_sources.sh
 
+      - name: Generate external project stubs
+        run: python3 scripts/generate_external_redirects.py
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
