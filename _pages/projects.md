@@ -8,24 +8,9 @@ has_children: true
 
 ## FEAST Projects
 
-The FEAST ecosystem includes several project repositories that provide tools, resources, and example implementations to support the broader automation framework:
+The FEAST ecosystem includes several project repositories that provide tools, resources, and implementations to support the broader automation framework. Those rendered directly in this site can be accessed via the left navigation menu. All external repositories pages can be found below:
 
-- [ProtoKit](/protokit/)
-
-  **ProtoKit** is an open-source collection of protoboards, stripboards, expansion boards, and layout boards with configured footprints and trace routing. Designed in KiCad to support rapid electronics prototyping and customization.
-
-- [DevBoardDepot](/devboarddepot/)
-
-  **DevBoardDepot** is an open-source collection of MCU development boards and kits, designed in KiCad for streamlined embedded development, testing, and prototyping.
-
-- [BreakoutPack](/breakoutpack/)
-
-  **BreakoutPack** is an open-source collection of breakout boards for ICs, connectors, sensors, and other components, designed in KiCad to support easy integration and rapid electronics development.
-
-- [CRUMBS](/crumbs/)
-
-  **CRUMBS** Communications Router and Unified Message Broker System (CRUMBS) supports the SPREAD firmware for BREAD.
-
-- [pyCRUMBS](/pycrumbs/)
-
-  **pyCRUMBS** pyCRUMBS is the Python implementation of the CRUMBS protocol for use on Raspberry Pi and other SBCs.
+- [Slice_TEMP](/Slice_TEMP/)
+- [Slice_DCMTK](/Slice_DCMTK/)
+- [can-nano-shield](/can-nano-shield/)
+- [can-nano-shield-fieldbus](/can-nano-shield-fieldbus/)

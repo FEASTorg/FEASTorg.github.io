@@ -14,7 +14,8 @@ FEAST is an open-source framework designed to democratize industrial automation 
 {: .fs-6 .fw-300 }
 
 [Get Started](/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub][FEASTorg Github]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Explore Projects](/projects/){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub][FEASTorg Github]{: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 ---
 
