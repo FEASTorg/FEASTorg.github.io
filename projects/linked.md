@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Linked Projects   🔗"
+title: "Linked Projects 🔗"
 permalink: /projects/linked/
 parent: Projects
 has_children: true

@@ -27,7 +27,7 @@ def main():
         content = f"""---
 layout: redirect
 title: {title}
-parent: Linked Projects
+parent: "Linked Projects 🔗"
 grand_parent: Projects
 nav_order: {i}
 redirect_to: {url}
