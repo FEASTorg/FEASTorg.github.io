@@ -68,7 +68,7 @@ def split_front_matter(text: str) -> Tuple[Dict, str]:
         return {}, text
     try:
         data = yaml.safe_load(m.group(1)) or {}
-    except Exception:
+    except yaml.YAMLError:
         # Be forgiving; treat malformed YAML as missing
         data = {}
     return data, text[m.end() :]
@@ -108,7 +108,7 @@ def _normalize_redirect_from(
     # Parse env as JSON array or scalar
     try:
         extra = yaml.safe_load(redirect_from_env) if redirect_from_env else []
-    except Exception:
+    except yaml.YAMLError:
         extra = []
     if isinstance(extra, str):
         extra = [extra]
