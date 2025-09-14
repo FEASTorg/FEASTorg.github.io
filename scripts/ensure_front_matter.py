@@ -166,16 +166,11 @@ def create_redirect_stubs(
         clean_path = redirect_url.strip("/")
         stub_path = site_root / f"{clean_path}.md"
 
-        # Create redirect content using Jekyll's redirect_from plugin
+        # Create redirect content using Jekyll's redirect_to front matter
         content = f"""---
-layout: default
 redirect_to: /{target_path}/
 permalink: {redirect_url}
-title: "{clean_path.upper()} (Redirecting...)"
-nav_exclude: true
 ---
-
-Redirecting to [/{target_path}/](/{target_path}/)...
 """
 
         # Ensure parent directory exists
