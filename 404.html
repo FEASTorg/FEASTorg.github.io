@@ -1,9 +1,32 @@
 ---
 permalink: /404.html
-layout: page
+layout: default
+title: Not Found
 ---
 
-<style type="text/css" media="screen">
+<script>
+  (function () {
+    try {
+      var path = location.pathname || "/";
+      var lower = path.toLowerCase();
+
+      // Attempt a one-time lowercase redirect to handle case-variant URLs.
+      if (
+        path !== lower &&
+        !sessionStorage.getItem("lowercase_redirect_attempted")
+      ) {
+        sessionStorage.setItem("lowercase_redirect_attempted", "1");
+        var target = lower + (location.search || "") + (location.hash || "");
+        location.replace(target);
+        return;
+      }
+    } catch (e) {
+      /* no-op */
+    }
+  })();
+</script>
+
+<style>
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -19,7 +42,10 @@ layout: page
 
 <div class="container">
   <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Page not found</strong></p>
+  <p>
+    The requested page could not be found. If you entered a mixed-case URL, try
+    all lowercase.
+  </p>
+  <p><a href="/">Go to FEASTorg home</a></p>
 </div>
