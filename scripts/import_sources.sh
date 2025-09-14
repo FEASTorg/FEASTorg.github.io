@@ -60,6 +60,10 @@ jq -c '.sources[]' "$manifest" | while IFS= read -r row; do
   find "${MOUNT_ABS}" -maxdepth 1 -type f -name '*.md' -printf '  %P\n' | sort || true
 
   echo "::group::Normalize front matter for $mount"
-  PROJECT_TITLE="$title" python3 "$ROOT/scripts/ensure_front_matter.py" "$MOUNT_ABS"
+  # Extract redirects from manifest and pass as comma-separated string
+  redirects="$(jq -r '.redirects[]? // empty' <<<"$row" | tr '\n' ',')"
+  redirects="${redirects%,}"  # Remove trailing comma
+  
+  PROJECT_TITLE="$title" REDIRECTS="$redirects" python3 "$ROOT/scripts/ensure_front_matter.py" "$MOUNT_ABS"
   echo "::endgroup::"
 done

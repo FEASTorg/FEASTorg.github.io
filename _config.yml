@@ -27,6 +27,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-relative-links
   - jekyll-titles-from-headings
+  - jekyll-redirect-from
 
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png

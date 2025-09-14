@@ -157,6 +157,33 @@ def process_page(root: Path, hub: Path, project_title: str, page_path: Path) -> 
     page_path.write_text(dump_front_matter(fm, body), encoding="utf-8")
 
 
+def create_redirect_stubs(
+    redirects: list[str], target_path: str, site_root: Path
+) -> None:
+    """Create redirect stub files for short URLs that redirect to the full path."""
+    for redirect_url in redirects:
+        # Clean path: /batch/ -> batch, /batch -> batch
+        clean_path = redirect_url.strip("/")
+        stub_path = site_root / f"{clean_path}.md"
+
+        # Create redirect content using Jekyll's redirect_from plugin
+        content = f"""---
+layout: default
+redirect_to: /{target_path}/
+permalink: {redirect_url}
+title: "{clean_path.upper()} (Redirecting...)"
+nav_exclude: true
+---
+
+Redirecting to [/{target_path}/](/{target_path}/)...
+"""
+
+        # Ensure parent directory exists
+        stub_path.parent.mkdir(parents=True, exist_ok=True)
+        stub_path.write_text(content, encoding="utf-8")
+        print(f"Created redirect stub: {stub_path} -> /{target_path}/")
+
+
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
         sys.stderr.write("usage: ensure_front_matter.py <root-dir>\n")
@@ -165,10 +192,25 @@ def main(argv: list[str]) -> int:
     root = Path(argv[1]).resolve()
     project_title = os.environ.get("PROJECT_TITLE", root.name).strip() or root.name
 
+    # Get redirects from environment (comma-separated list from shell script)
+    redirects_env = os.environ.get("REDIRECTS", "").strip()
+    redirects = (
+        [r.strip() for r in redirects_env.split(",") if r.strip()]
+        if redirects_env
+        else []
+    )
+
     hub = ensure_hub_index(root, project_title)
 
     for path in root.rglob("*"):
         process_page(root, hub, project_title, path)
+
+    # Create redirect stubs if any redirects are specified
+    if redirects:
+        # Determine the target path relative to site root
+        site_root = root.parent  # Go up from mounted directory to site root
+        relative_mount = root.relative_to(site_root)
+        create_redirect_stubs(redirects, str(relative_mount), site_root)
 
     return 0
 

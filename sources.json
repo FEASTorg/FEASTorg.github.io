@@ -7,6 +7,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/breads",
+            "redirects": [
+                "/breads/",
+                "/breads"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -19,6 +23,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/froots",
+            "redirects": [
+                "/froots/",
+                "/froots"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -31,6 +39,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/protins",
+            "redirects": [
+                "/protins/",
+                "/protins"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -43,6 +55,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/sugirs",
+            "redirects": [
+                "/sugirs/",
+                "/sugirs"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -55,6 +71,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/slice",
+            "redirects": [
+                "/slice/",
+                "/slice"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -67,6 +87,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/loaf",
+            "redirects": [
+                "/loaf/",
+                "/loaf"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -79,6 +103,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/batch",
+            "redirects": [
+                "/batch/",
+                "/batch"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -91,6 +119,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/oven",
+            "redirects": [
+                "/oven/",
+                "/oven"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -103,6 +135,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-hierarchical-designs",
+            "redirects": [
+                "/kicad-hierarchical-designs/",
+                "/kicad-hierarchical-designs"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -115,6 +151,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-simulation-examples",
+            "redirects": [
+                "/kicad-simulation-examples/",
+                "/kicad-simulation-examples"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
@@ -127,6 +167,10 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-master-lib",
+            "redirects": [
+                "/kicad-master-lib/",
+                "/kicad-master-lib"
+            ],
             "exclude": [
                 "**/*.xcf",
                 "**/TODO.md"
