@@ -8,7 +8,9 @@ has_children: true
 
 ## FEAST Projects
 
-The FEAST ecosystem includes several project repositories that provide tools, resources, and implementations to support the broader automation framework. Those rendered directly in this site can be accessed via the left navigation menu. All external repositories pages can be found below:
+The FEAST ecosystem consists of several project repositories that provide tools, resources, and implementations in support of our broader automation framework. Projects rendered directly on this site are accessible through the left-hand navigation menu.
+
+Additional project pages, hosted externally, can be accessed via their corresponding GitHub Pages sites:
 
 - [Slice_TEMP](/Slice_TEMP/)
 - [Slice_DCMT](/Slice_DCMT/)
