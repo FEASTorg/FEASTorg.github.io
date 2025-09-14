@@ -175,6 +175,38 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "protokit",
+            "title": "ProtoKit",
+            "repo": "FEASTorg/ProtoKit",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/protokit",
+            "redirect_from": [
+                "/protokit/",
+                "/protokit"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "devboarddepot",
+            "title": "DevBoardDepot",
+            "repo": "FEASTorg/DevBoardDepot",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/devboarddepot",
+            "redirect_from": [
+                "/devboarddepot/",
+                "/devboarddepot"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
