@@ -17,3 +17,7 @@ The FEAST ecosystem includes several project repositories that provide tools, re
 - [DevBoardDepot](/devboarddepot/)
 
   **DevBoardDepot** is an open-source collection of MCU development boards and kits, designed in KiCad for streamlined embedded development, testing, and prototyping.
+
+- [BreakoutPack](/breakoutpack/)
+
+  **BreakoutPack** is an open-source collection of breakout boards for ICs, connectors, sensors, and other components, designed in KiCad to support easy integration and rapid electronics development.

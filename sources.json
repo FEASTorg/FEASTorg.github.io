@@ -207,6 +207,22 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "breakoutpack",
+            "title": "BreakoutPack",
+            "repo": "FEASTorg/BreakoutPack",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/breakoutpack",
+            "redirect_from": [
+                "/breakoutpack/",
+                "/breakoutpack"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
