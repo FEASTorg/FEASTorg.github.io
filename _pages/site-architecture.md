@@ -7,56 +7,57 @@ nav_order: 13
 
 ## Overview
 
-The FEASTorg documentation is organized using a hybrid approach that balances searchability, maintainability, and CI/CD complexity.
+FEASTorg uses a hybrid Jekyll architecture that combines automated content import from across multiple repositories with centralized presentation and search. This is designed to balance site quality, maintainability, performance, and workflow efficiency.
 
-## Technical Foundation
+## Technical Stack
 
-This site is built using [Jekyll](https://jekyllrb.com/), a static site generator that transforms plain text into static websites. Key technical components include:
+**Core**: Jekyll 4.4+ with Just the Docs v0.10.1, Ruby 3.3, GitHub Pages  
+**Plugins**: SEO-tag, feed, relative-links, redirect-from, include-cache
 
-- **Theme**: Using [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme for enhanced documentation features
-- **Source Control**: All source code is maintained on [GitHub](https://github.com/FEASTorg)
-- **Hosting**: Deployed via GitHub Pages at [feastorg.github.io](https://feastorg.github.io)
+## Content Architecture
 
-### Developer Resources
+### Hub Repository Structure
 
-For contributors working on site improvements:
+- **`_pages/`**: Hand-maintained core documentation
+- **`getting-started/`, `usage/`, `development/`**: Organized guide collections
+- **`_posts/`**: Project updates and announcements
+- **Auto-imported content**: collection of repositories via `sources.json`
 
-- Jekyll Documentation: [jekyllrb.com](https://jekyllrb.com/)
-- GitHub Pages Guide: [pages.github.com](https://pages.github.com/)
-- Just the Docs Theme: [just-the-docs.github.io](https://just-the-docs.github.io/just-the-docs/)
+### Automated Import System
 
-## Site Structure
+**Process**: Daily automated import via `scripts/import_sources.sh`
 
-### Main Documentation Repository
+1. Sparse Git cloning (docs subdirectories only)
+2. Intelligent filtering (global + per-repo `.indexignore`)
+3. Front matter normalization for navigation hierarchy
+4. URL redirect management
 
-- This repository (`FEASTorg.github.io`) serves as the primary documentation hub
-- Built as a monolithic site using Jekyll
-- Features integrated search functionality
-- Contains core documentation, guides, and project overviews
+### Linked Projects Architecture
 
-### Site Filtering
+Some projects maintain standalone GitHub Pages sites but are linked through the hub due to complex CI/CD requirements. For example, hardware projects (e.g., Slice\_\* repositories) have their own build pipeline using [bread-infra](https://github.com/FEASTorg/bread-infra), or the Freeboard Project, which has its own CI/CD setup using auto-generated developer API reference and component documentation from monorepo packages, published via VuePress and GitHub Actions.
 
-- `source.json` exclude: Hub-level filtering to enforce policy and catch missing, .indexignore in each repo does per-repo filtering
+These are managed via `sources.linked.json` and automatically generate redirect stub pages.
 
-### Externally Generated Sites
+## Navigation & Styling
 
-Some documentation is intentionally maintained in separate repositories for the following reasons:
+**Structure**: Just the Docs hierarchical parent-child system with automated layout assignment via `_config.yml` defaults
 
-- To prevent search result pollution from repetitive content
-- To maintain specialized CI/CD workflows
-- To handle complex development documentation separately
+**Branding**: Custom FEAST color system (`_sass/custom/tokens.scss`) with:
 
-These include:
+- Primary blues (engineering theme)
+- Accent oranges (harvest/warmth)
+- Growth greens (automation/nature)
+- Neutral grays (surfaces)
 
-- **Slice_XXXX pages**: Documentation for individual SLICE implementations
-- **freeboard**: Development documentation with its own monorepo structure
+## Build Pipeline
 
-### Documentation Integration Strategy
+**Triggers**: Push to main, daily at 23:11 EST, manual dispatch  
+**Process**: Environment setup → Content import → Stub generation → Jekyll build → Deploy
 
-- Core documentation is pulled into this repository for unified access
-- External documentation maintains independent build processes
-- This approach ensures:
-  - Efficient search functionality
-  - Streamlined maintenance
-  - Optimal performance
-  - Separation of concerns where beneficial
+**Features**:
+
+- Daily sync keeps external content current
+- Full-text search across all imported content
+- Smart tokenization for hyphenated terms
+- Pretty URLs with redirect management
+- Performance optimizations (sparse cloning, asset optimization, CDN)
