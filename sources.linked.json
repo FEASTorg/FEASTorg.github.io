@@ -1,6 +1,21 @@
 {
     "linked_projects": [
         {
+            "name": "Slice_DCMT",
+            "title": "Slice DCMT",
+            "url": "/Slice_DCMT/"
+        },
+        {
+            "name": "can-nano-shield",
+            "title": "CAN Nano Shield",
+            "url": "/can-nano-shield/"
+        },
+        {
+            "name": "can-nano-shield-fieldbus",
+            "title": "CAN Nano Fieldbus",
+            "url": "/can-nano-shield-fieldbus/"
+        },
+        {
             "name": "Slice_TEMP_NANO_S2L-r1",
             "title": "Slice TEMP NANO S2L-r1",
             "url": "/Slice_TEMP_NANO_S2L-r1/"
@@ -21,19 +36,24 @@
             "url": "/Slice_TEMP_NUCL_L4L-r1/"
         },
         {
-            "name": "Slice_DCMT",
-            "title": "Slice DCMT",
-            "url": "/Slice_DCMT/"
+            "name": "Slice_PRTO_CONN_S2L",
+            "title": "Slice PRTO CONN S2L",
+            "url": "/Slice_PRTO_CONN_S2L/"
         },
         {
-            "name": "can-nano-shield",
-            "title": "CAN Nano Shield",
-            "url": "/can-nano-shield/"
+            "name": "Slice_PRTO_THT_S2L",
+            "title": "Slice PRTO THT S2L",
+            "url": "/Slice_PRTO_THT_S2L/"
         },
         {
-            "name": "can-nano-shield-fieldbus",
-            "title": "CAN Nano Fieldbus",
-            "url": "/can-nano-shield-fieldbus/"
+            "name": "Slice_PRTO_THTA_S2L",
+            "title": "Slice PRTO THTA S2L",
+            "url": "/Slice_PRTO_THTA_S2L/"
+        },
+        {
+            "name": "Slice_PRTO_SMT_S2L",
+            "title": "Slice PRTO SMT S2L",
+            "url": "/Slice_PRTO_SMT_S2L/"
         }
     ]
 }
