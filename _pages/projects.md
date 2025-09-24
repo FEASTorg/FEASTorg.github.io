@@ -12,7 +12,10 @@ The FEAST ecosystem consists of several project repositories that provide tools,
 
 Additional project pages, hosted standalone, can be accessed via their corresponding GitHub Pages sites:
 
-- [Slice_TEMP](/Slice_TEMP/)
+- [Slice_TEMP_NANO_S2L-r1](/Slice_TEMP_NANO_S2L-r1/)
+- [Slice_TEMP_NANO_S2L-r2](/Slice_TEMP_NANO_S2L-r2/)
+- [Slice_TEMP_NUCL_S4L-r1](/Slice_TEMP_NUCL_S4L-r1/)
+- [Slice_TEMP_NUCL_L4L-r1](/Slice_TEMP_NUCL_L4L-r1/)
 - [Slice_DCMT](/Slice_DCMT/)
 - [can-nano-shield](/can-nano-shield/)
 - [can-nano-shield-fieldbus](/can-nano-shield-fieldbus/)

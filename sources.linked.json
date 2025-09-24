@@ -1,9 +1,24 @@
 {
     "linked_projects": [
         {
-            "name": "Slice_TEMP",
-            "title": "Slice TEMP",
-            "url": "/Slice_TEMP/"
+            "name": "Slice_TEMP_NANO_S2L-r1",
+            "title": "Slice TEMP NANO S2L-r1",
+            "url": "/Slice_TEMP_NANO_S2L-r1/"
+        },
+        {
+            "name": "Slice_TEMP_NANO_S2L-r2",
+            "title": "Slice TEMP NANO S2L-r2",
+            "url": "/Slice_TEMP_NANO_S2L-r2/"
+        },
+        {
+            "name": "Slice_TEMP_NUCL_S4L-r1",
+            "title": "Slice TEMP NUCLEAR S4L-r1",
+            "url": "/Slice_TEMP_NUCL_S4L-r1/"
+        },
+        {
+            "name": "Slice_TEMP_NUCL_L4L-r1",
+            "title": "Slice TEMP NUCLEAR L4L-r1",
+            "url": "/Slice_TEMP_NUCL_L4L-r1/"
         },
         {
             "name": "Slice_DCMT",
