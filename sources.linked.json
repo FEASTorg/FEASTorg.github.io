@@ -6,6 +6,16 @@
             "url": "/Slice_DCMT/"
         },
         {
+            "name": "Slice_THRM_31855",
+            "title": "Slice THRM 31855",
+            "url": "/Slice_THRM_31855/"
+        },
+        {
+            "name": "Slice_THRM_31856",
+            "title": "Slice THRM 31856",
+            "url": "/Slice_THRM_31856/"
+        },
+        {
             "name": "can-nano-shield",
             "title": "CAN Nano Shield",
             "url": "/can-nano-shield/"
