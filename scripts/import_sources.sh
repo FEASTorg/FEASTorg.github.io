@@ -31,7 +31,7 @@ IFS=$'\n\t'
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 readonly ROOT
-readonly MANIFEST="${ROOT}/sources.json"
+readonly MANIFEST="${ROOT}/_data/sources.json"
 
 # --- Utilities ----------------------------------------------------------------
 
