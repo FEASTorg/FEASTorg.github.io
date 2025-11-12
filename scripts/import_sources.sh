@@ -78,7 +78,7 @@ jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
 
   url="https://github.com/${repo}.git"
 
-  echo "::group::Clone ${repo}@${ref} → ${tmp} (sparse: ${sub})"
+  echo "::group::Clone ${repo}@${ref} -> ${tmp} (sparse: ${sub})"
   rm -rf -- "${TMP_ABS:?}"
   git clone --quiet --filter=blob:none --no-checkout --depth 1 --branch "$ref" "$url" "$TMP_ABS"
   git -C "$TMP_ABS" sparse-checkout init --cone
@@ -86,7 +86,7 @@ jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
   git -C "$TMP_ABS" checkout --quiet
   echo "::endgroup::"
 
-  echo "::group::Sync ${sub} → ${mount}"
+  echo "::group::Sync ${sub} -> ${mount}"
   rm -rf -- "${MOUNT_ABS:?}"
   mkdir -p "${MOUNT_ABS}"
 

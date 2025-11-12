@@ -35,7 +35,7 @@ redirect_to: {url}
 """
 
         path.write_text(content.strip() + "\n", encoding="utf-8")
-        print(f"✔ Generated redirect: {path}")
+        print(f"Generated redirect: {path}")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ Rewrites Markdown files in-place to include normalized front matter.
 
 Notes
 -----
-- Designed for Just the Docs’ exact-title parent/child matching.
+- Designed for Just the Docs' exact-title parent/child matching.
 - Safe on repeated runs (no behavioral drift, stable formatting).
 """
 
