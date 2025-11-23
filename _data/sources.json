@@ -255,6 +255,22 @@
                 "**/*.xcf",
                 "**/TODO.md"
             ]
+        },
+        {
+            "name": "linux-wire",
+            "title": "linux-wire",
+            "repo": "FEASTorg/linux-wire",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/linux-wire",
+            "redirect_from": [
+                "/linux-wire/",
+                "/linux-wire"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
         }
     ]
 }
