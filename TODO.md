@@ -1,5 +1,7 @@
 # TODO
 
+- [ ] Add KNEEAD to navigation bar (external link needs redirect setup)
+
 ## New Project Documentation
 
 Add documentation for the following projects:
