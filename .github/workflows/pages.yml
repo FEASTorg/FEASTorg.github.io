@@ -1,10 +1,10 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Pages
 
 on:
   push: { branches: ["main"] }
   workflow_dispatch:
   schedule:
-  # 23:11 EST (UTC-5) daily -> 04:11 UTC
+    # 23:11 EST (UTC-5) daily -> 04:11 UTC
     - cron: "11 4 * * *"
 
 permissions:
