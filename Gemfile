@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.4.1"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "just-the-docs", "0.10.1" # pinned to the current release
+gem "just-the-docs", "0.10.2" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
 
 # Explicitly include plugins referenced in _config.yml
