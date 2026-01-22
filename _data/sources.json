@@ -241,22 +241,6 @@
             ]
         },
         {
-            "name": "pycrumbs",
-            "title": "pyCRUMBS",
-            "repo": "FEASTorg/pyCRUMBS",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "projects/pycrumbs",
-            "redirect_from": [
-                "/pycrumbs/",
-                "/pycrumbs"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
             "name": "linux-wire",
             "title": "linux-wire",
             "repo": "FEASTorg/linux-wire",
