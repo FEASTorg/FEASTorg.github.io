@@ -44,6 +44,3 @@ $border-color: $feast-border;
 // ── Table styling ─────────────────────────────────────────────────────────────
 // CHANGED: Use feast surface for table backgrounds (consistency)
 $table-background-color: $feast-surface;
-
-// Syntax highlighting for light theme
-@import "./vendor/OneLightJekyll/syntax";
