@@ -12,6 +12,6 @@ The FEAST ecosystem consists of several project repositories that provide tools,
 
 Additional project pages, hosted standalone, can be accessed via their corresponding GitHub Pages sites:
 
-{% for project in site.data.sources.linked.linked_projects %}
+{% for project in site.data.sources_linked.linked_projects %}
 - [{{ project.title }}]({{ project.url }})
 {% endfor %}
