@@ -25,6 +25,7 @@ Inputs
 argv[1]            : Path to the imported project root (mount directory)
 Env.PROJECT_TITLE  : Optional project display name (defaults to directory name)
 Env.REDIRECT_FROM  : Optional JSON array or string for redirect_from on hub
+Env.NAV_ORDER      : Optional integer for nav_order on hub
 
 Outputs
 -------
@@ -135,12 +136,15 @@ def _normalize_redirect_from(
     return sorted(out)
 
 
-def ensure_hub_index(root: Path, project_title: str, redirect_from_env: str) -> Path:
+def ensure_hub_index(
+    root: Path, project_title: str, redirect_from_env: str, nav_order_env: str
+) -> Path:
     """
     Create or normalize the hub page at <root>/index.md.
 
     Forces canonical title and section semantics. Merges redirect_from entries
     from REDIRECT_FROM env to support legacy slugs via jekyll-redirect-from.
+    Sets nav_order if provided in NAV_ORDER env.
     """
     hub = root / "index.md"
     if hub.exists():
@@ -154,6 +158,13 @@ def ensure_hub_index(root: Path, project_title: str, redirect_from_env: str) -> 
     fm["has_children"] = True
     fm.pop("parent", None)
     fm.pop("grand_parent", None)
+
+    # Set nav_order if provided
+    if nav_order_env and nav_order_env.strip():
+        try:
+            fm["nav_order"] = int(nav_order_env.strip())
+        except ValueError:
+            pass  # Ignore invalid nav_order values
 
     redirects = _normalize_redirect_from(redirect_from_env, fm.get("redirect_from"))
     if redirects:
@@ -243,8 +254,9 @@ def main(argv: list[str]) -> int:
     root = Path(argv[1]).resolve()
     project_title = os.environ.get("PROJECT_TITLE", root.name).strip() or root.name
     redirect_from_env = os.environ.get("REDIRECT_FROM", "")
+    nav_order_env = os.environ.get("NAV_ORDER", "")
 
-    hub = ensure_hub_index(root, project_title, redirect_from_env)
+    hub = ensure_hub_index(root, project_title, redirect_from_env, nav_order_env)
 
     for path in root.rglob("*"):
         process_page(root, hub, project_title, path)

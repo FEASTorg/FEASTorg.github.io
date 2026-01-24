@@ -7,6 +7,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/breads",
+            "nav_order": 1,
             "redirect_from": [
                 "/breads/",
                 "/breads"
@@ -23,6 +24,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/froots",
+            "nav_order": 2,
             "redirect_from": [
                 "/froots/",
                 "/froots"
@@ -39,6 +41,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/protins",
+            "nav_order": 3,
             "redirect_from": [
                 "/protins/",
                 "/protins"
@@ -55,6 +58,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "implementation-domains/sugirs",
+            "nav_order": 4,
             "redirect_from": [
                 "/sugirs/",
                 "/sugirs"
@@ -71,6 +75,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/slice",
+            "nav_order": 1,
             "redirect_from": [
                 "/slice/",
                 "/slice"
@@ -87,6 +92,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/loaf",
+            "nav_order": 2,
             "redirect_from": [
                 "/loaf/",
                 "/loaf"
@@ -103,6 +109,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/batch",
+            "nav_order": 3,
             "redirect_from": [
                 "/batch/",
                 "/batch"
@@ -119,6 +126,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "system-levels/oven",
+            "nav_order": 4,
             "redirect_from": [
                 "/oven/",
                 "/oven"

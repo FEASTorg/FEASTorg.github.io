@@ -9,7 +9,7 @@
 #     * Rsync the selected subtree into the local .mount path
 #       - Respects per-source "exclude" globs and per-repo ".indexignore"
 #     * Normalize front matter for Just the Docs via ensure_front_matter.py
-#       - Passes PROJECT_TITLE and REDIRECT_FROM (JSON) env vars
+#       - Passes PROJECT_TITLE, REDIRECT_FROM (JSON), and NAV_ORDER env vars
 #
 # Inputs:
 #   sources.json entries:
@@ -21,6 +21,7 @@
 #     - mount           : destination mount path in this repo
 #     - exclude[]       : optional rsync exclude patterns
 #     - redirect_from[] : optional legacy slugs (or "redirects[]" for bw-compat)
+#     - nav_order       : optional integer for navigation ordering
 #
 # Requirements: bash, git, jq, rsync
 # Safe defaults: set -euo pipefail, strict quoting, basic path sanitization.
@@ -109,7 +110,8 @@ jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
   echo "::group::Normalize front matter for ${mount}"
   # Accept either "redirect_from" or legacy "redirects"
   redirect_from_json="$(jq -c '.redirect_from? // .redirects? // []' <<<"$row")"
-  PROJECT_TITLE="$title" REDIRECT_FROM="$redirect_from_json" \
+  nav_order="$(jq -r '.nav_order? // ""' <<<"$row")"
+  PROJECT_TITLE="$title" REDIRECT_FROM="$redirect_from_json" NAV_ORDER="$nav_order" \
     python3 "${ROOT}/scripts/ensure_front_matter.py" "$MOUNT_ABS"
   echo "::endgroup::"
 done
