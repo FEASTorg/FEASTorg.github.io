@@ -1,37 +1,24 @@
 # TODO
 
-- [ ] Add KNEEAD to navigation bar (external link needs redirect setup)
+- [x] Add KNEEAD to navigation bar (external link needs redirect setup)
 
-## New Project Documentation
+- [ ] KiCad-Hierarchical-Designs change to KiCad-Design-Blocks ? Using KiCad's [Schematic Design Blocks](https://docs.kicad.org/9.0/ca/eeschema/eeschema.html#schematic-design-blocks) or would it be better as a separate project? Need to investigate further.
 
-Add documentation for the following projects:
+- [ ] proto.pretty move the lib out of Protokit and into KiCad-Master-Lib? Then use in Protokit and in the Slice_PRTO_XYZ projects?
 
-- [ ] Breakout Pack
-- [ ] ProtoKit
-- [ ] DevBoard Depot
+- Add the MVP documentation for the following projects and how they fit into the FEAST ecosystem and relate to each other:
+  - [ ] Breakout Pack
+  - [ ] ProtoKit
+  - [ ] DevBoard Depot
 
-## Visual Documentation
-
-Create visual aids for better project understanding:
-
-- [ ] Repository/Organization Concept Map
-
-  - Show relationships between projects
-  - Illustrate organizational structure
+- [ ] Repository/Organization Concept Map: show relationships between projects and illustrate organizational structure
 
 - [ ] Dependency Map
-
   - Project interconnections
   - Technology stack relationships
 
-## Integrate Project Documentation
-
 - [ ] KNEEAD clean up and improve UX
 - [ ] Freeboard transfer from personal
-
-## Future Items
-
-- [ ] Automation project charter template
 
 ## Future Projects
 
