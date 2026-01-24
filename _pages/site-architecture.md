@@ -2,7 +2,7 @@
 layout: page
 title: Site Architecture
 permalink: /site-architecture/
-nav_order: 13
+nav_order: 12
 ---
 
 ## Overview
@@ -19,7 +19,7 @@ FEASTorg uses a hybrid Jekyll architecture that combines automated content impor
 ### Hub Repository Structure
 
 - **`_pages/`**: Hand-maintained core documentation
-- **`getting-started/`, `usage/`, `development/`**: Organized guide collections
+- **`getting-started/`, `usage/`**: Organized guide collections
 - **`_posts/`**: Project updates and announcements
 - **Auto-imported content**: collection of repositories via `_data/sources.json`
 
@@ -61,3 +61,18 @@ These are managed via `_data/sources.linked.json` and automatically generate red
 - Smart tokenization for hyphenated terms
 - Pretty URLs with redirect management
 - Performance optimizations (sparse cloning, asset optimization, CDN)
+
+## Using Jekyll Features
+
+Callout examples:
+
+{: .note }
+This project is under heavy development
+
+{: .new }
+
+> A paragraph
+>
+> Another paragraph
+>
+> The last paragraph

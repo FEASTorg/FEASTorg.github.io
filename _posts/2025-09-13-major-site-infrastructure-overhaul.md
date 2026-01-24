@@ -15,7 +15,6 @@ Major updates to the FEASTorg website structure and design completed today.
 - Added structured navigation hierarchy:
   - Implementation Domains (BREADS, FROOTS, PROTINS, SUGIRS)
   - System Levels (SLICE, LOAF, BATCH, OVEN)
-  - Development (guides and documentation)
   - Developer Resources (KiCad libraries and examples)
 
 ### Custom Styling
@@ -40,7 +39,6 @@ Major updates to the FEASTorg website structure and design completed today.
 
 - Added getting-started guides (`getting-started/`)
 - Created usage documentation (`usage/`)
-- Added development section (`development/`)
 - Expanded contributor resources
 
 ## Technical Details

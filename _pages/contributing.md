@@ -2,7 +2,7 @@
 layout: page
 title: Contributing
 permalink: /contributing/
-nav_order: 12
+nav_order: 11
 ---
 
 ## Contributing to FEAST

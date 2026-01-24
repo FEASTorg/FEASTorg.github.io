@@ -104,12 +104,6 @@ defaults:
       parent: "System Levels"
       nav_exclude: false
   - scope:
-      path: "development/**"
-    values:
-      layout: "default"
-      parent: "Development"
-      nav_exclude: false
-  - scope:
       path: "developer-resources/**"
     values:
       layout: "default"
