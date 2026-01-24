@@ -185,24 +185,6 @@
             ]
         },
         {
-            "name": "kneead",
-            "title": "KNEEAD",
-            "repo": "FEASTorg/KNEEAD",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "developer-resources/kneead",
-            "redirect_from": [
-                "/kneead/",
-                "/kneead",
-                "/KNEEAD/",
-                "/KNEEAD"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
             "name": "protokit",
             "title": "ProtoKit",
             "repo": "FEASTorg/ProtoKit",
