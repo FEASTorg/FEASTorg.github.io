@@ -7,7 +7,7 @@ Each page redirects to a GitHub Pages site and is nested under 'Projects > Linke
 import json
 from pathlib import Path
 
-CONFIG = Path("_data/sources.linked.json")
+CONFIG = Path("_data/linked_projects.json")
 OUT_DIR = Path("docs/projects/linked")
 
 
