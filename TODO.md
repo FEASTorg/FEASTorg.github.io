@@ -19,15 +19,15 @@
 
 - [ ] Repository/Organization Concept Map: show relationships between projects and illustrate organizational structure
 
-- [ ] Dependency Map: Project interconnections& Technology stack relationships
+- [ ] Dependency Map: Project interconnections & Technology stack relationships
 
 - [ ] KNEEAD clean up and improve UX
 
 - [ ] Freeboard transfer from personal
 
-## Future Projects
+## Future Tasks
 
-- [ ] CRUST
-- [ ] [KiCad RPi HAT](https://github.com/FEASTorg/KiCad-RPi-HAT)
+- [ ] [KiCad-RPi-HAT](https://github.com/FEASTorg/KiCad-RPi-HAT)
 - [ ] [KiCad-Simulation-Examples](https://github.com/FEASTorg/KiCad-Simulation-Examples)
-- [ ] [KiCad Databases](https://github.com/FEASTorg/KiCad-Databases)
+- [ ] [KiCad-Databases](https://github.com/FEASTorg/KiCad-Databases)
+- [ ] CRUST flesh out and assign to someone
