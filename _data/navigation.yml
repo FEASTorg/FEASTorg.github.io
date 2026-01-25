@@ -21,8 +21,6 @@ external_links:
     url: /system-levels/oven/
   - name: KiCad-Master-Lib
     url: /developer-resources/kicad-master-lib/
-  - name: KiCad-Hierarchical-Designs
-    url: /developer-resources/kicad-hierarchical-designs/
   - name: KiCad-Simulation-Examples
     url: /developer-resources/kicad-simulation-examples/
   - name: ProtoKit

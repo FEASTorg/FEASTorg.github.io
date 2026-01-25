@@ -137,22 +137,6 @@
             ]
         },
         {
-            "name": "kicad-hierarchical-designs",
-            "title": "KiCad Hierarchical Designs",
-            "repo": "FEASTorg/KiCad-Hierarchical-Designs",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "developer-resources/kicad-hierarchical-designs",
-            "redirect_from": [
-                "/kicad-hierarchical-designs/",
-                "/kicad-hierarchical-designs"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
             "name": "kicad-simulation-examples",
             "title": "KiCad Simulation Examples",
             "repo": "FEASTorg/KiCad-Simulation-Examples",
