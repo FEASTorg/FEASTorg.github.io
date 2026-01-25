@@ -12,22 +12,24 @@
   - [ ] BreakoutPack
   - [ ] ProtoKit
   - [ ] DevBoardDepot
-  - [ ] CircuitBlocks
   - [ ] Maybe merge all these for now under a mono-repo?
 
+- [ ] Freeboard transfer from personal
+
 - [ ] Update all ProtoKit examples to use proto.pretty from KiCad-Master-Lib
+
+- [ ] KNEEAD clean up and improve UX
 
 - [ ] Repository/Organization Concept Map: show relationships between projects and illustrate organizational structure
 
 - [ ] Dependency Map: Project interconnections & Technology stack relationships
 
-- [ ] KNEEAD clean up and improve UX
-
-- [ ] Freeboard transfer from personal
-
 ## Future Tasks
 
 - [ ] [KiCad-RPi-HAT](https://github.com/FEASTorg/KiCad-RPi-HAT)
+
 - [ ] [KiCad-Simulation-Examples](https://github.com/FEASTorg/KiCad-Simulation-Examples)
+
 - [ ] [KiCad-Databases](https://github.com/FEASTorg/KiCad-Databases)
+
 - [ ] CRUST flesh out and assign to someone

@@ -161,9 +161,7 @@
             "mount": "developer-resources/kicad-master-lib",
             "redirect_from": [
                 "/kicad-master-lib/",
-                "/kicad-master-lib",
-                "/KiCad-Master-Lib/",
-                "/KiCad-Master-Lib"
+                "/kicad-master-lib"
             ],
             "exclude": [
                 "**/*.xcf",
