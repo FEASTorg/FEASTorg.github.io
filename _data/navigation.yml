@@ -3,18 +3,18 @@
 
 # External project links (imported content)
 external_links:
+  # Projects
   - name: BREADS
     url: /projects/breads/
-  - name: ProtoKit
-    url: /projects/protokit/
-  - name: DevBoardDepot
-    url: /projects/devboarddepot/
-  - name: BreakoutPack
-    url: /projects/breakoutpack/
   - name: CRUMBS
     url: /projects/crumbs/
   - name: linux-wire
     url: /projects/linux-wire/
+  - name: nano-dev-boards
+    url: /projects/nano-dev-boards/
+  - name: protokit
+    url: /projects/protokit/
+  # Developer Resources
   - name: KiCad-Master-Lib
     url: /developer-resources/kicad-master-lib/
   - name: KiCad-Simulation-Examples

@@ -17,11 +17,11 @@
   - SLICE, FROOTS, PROTINS, SIGARS
   - Retain as a future vision / prior ideas / brainstorming section in the documentation?
 
-- [ ] Update all ProtoKit to use proto.pretty from KiCad-Master-Lib and build schematics for those that don't have them yet where it makes sense (i.e. project boards)
+- [ ] Update all protokit to use proto.pretty from KiCad-Master-Lib and build schematics for those that don't have them yet where it makes sense (i.e. project boards)
 
 - Add the MVP documentation for the following projects and how they fit into the FEAST ecosystem and relate to each other:
   - [ ] BreakoutPack
-  - [ ] ProtoKit
+  - [ ] protokit
   - [ ] DevBoardDepot
   - [ ] Maybe merge all these for now under a mono-repo?
   - [ ] Now does it related to nanos-kicad and can-nano-shield?
@@ -32,7 +32,7 @@
 
 - [ ] Freeboard transfer from personal
 
-- [ ] Update all ProtoKit examples to use proto.pretty from KiCad-Master-Lib
+- [ ] Update all protokit examples to use proto.pretty from KiCad-Master-Lib
 
 - [ ] KNEEAD clean up and improve UX
 
