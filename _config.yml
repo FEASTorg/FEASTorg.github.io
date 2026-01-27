@@ -92,18 +92,6 @@ defaults:
     values:
       nav_exclude: true
   - scope:
-      path: "implementation-domains/**"
-    values:
-      layout: "default"
-      parent: "Implementation Domains"
-      nav_exclude: false
-  - scope:
-      path: "system-levels/**"
-    values:
-      layout: "default"
-      parent: "System Levels"
-      nav_exclude: false
-  - scope:
       path: "developer-resources/**"
     values:
       layout: "default"

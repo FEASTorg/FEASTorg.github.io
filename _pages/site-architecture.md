@@ -34,7 +34,7 @@ FEASTorg uses a hybrid Jekyll architecture that combines automated content impor
 
 ### Linked Projects Architecture
 
-Some projects maintain standalone GitHub Pages sites but are linked through the hub due to complex CI/CD requirements. For example, hardware projects (e.g., Slice\_\* repositories) have their own build pipeline using [bread-infra](https://github.com/FEASTorg/bread-infra), or the Freeboard Project, which has its own CI/CD setup using auto-generated developer API reference and component documentation from monorepo packages, published via VuePress and GitHub Actions.
+Some projects maintain standalone GitHub Pages sites but are linked through the hub due to complex CI/CD requirements. For example, hardware projects have their own build pipeline using [bread-infra](https://github.com/FEASTorg/bread-infra), or the Freeboard Project, which has its own CI/CD setup using auto-generated developer API reference and component documentation from monorepo packages, published via VuePress and GitHub Actions.
 
 These are managed via `_data/linked_projects.json` and automatically generate redirect stub pages.
 

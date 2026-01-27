@@ -19,24 +19,6 @@ FEAST is built on four fundamental principles:
 - **Interoperability**: Standardized interfaces ensure seamless component integration
 - **Open Standards**: All specifications are openly documented and community-driven
 
-## Architecture Overview
-
-FEAST organizes automation systems into two main organizational structures:
-
-### Functional Implementation Domains
-
-- **BREADS**: Hardware specifications and mechanical interfaces
-- **FROOTS**: Firmware frameworks and device control logic
-- **PROTINS**: Middleware for orchestration and device management
-- **SUGIRS**: Software interfaces and user interaction systems
-
-### Hierarchical System Levels
-
-- **SLICE**: Individual function modules with embedded processing
-- **LOAF**: Local controllers coordinating multiple SLICE devices
-- **BATCH**: Clustered systems managing multiple LOAF controllers
-- **OVEN**: Facility-level networks integrating multiple BATCH clusters
-
 ## Benefits
 
 - **Reduced Development Time**: Reuse proven components and patterns

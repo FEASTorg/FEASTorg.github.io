@@ -4,25 +4,7 @@
 # External project links (imported content)
 external_links:
   - name: BREADS
-    url: /implementation-domains/breads/
-  - name: FROOTS
-    url: /implementation-domains/froots/
-  - name: PROTINS
-    url: /implementation-domains/protins/
-  - name: SUGIRS
-    url: /implementation-domains/sugirs/
-  - name: SLICE
-    url: /system-levels/slice/
-  - name: LOAF
-    url: /system-levels/loaf/
-  - name: BATCH
-    url: /system-levels/batch/
-  - name: OVEN
-    url: /system-levels/oven/
-  - name: KiCad-Master-Lib
-    url: /developer-resources/kicad-master-lib/
-  - name: KiCad-Simulation-Examples
-    url: /developer-resources/kicad-simulation-examples/
+    url: /projects/breads/
   - name: ProtoKit
     url: /projects/protokit/
   - name: DevBoardDepot
@@ -33,3 +15,7 @@ external_links:
     url: /projects/crumbs/
   - name: linux-wire
     url: /projects/linux-wire/
+  - name: KiCad-Master-Lib
+    url: /developer-resources/kicad-master-lib/
+  - name: KiCad-Simulation-Examples
+    url: /developer-resources/kicad-simulation-examples/

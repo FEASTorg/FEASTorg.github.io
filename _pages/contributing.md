@@ -36,7 +36,7 @@ We welcome contributions from developers, engineers, researchers, and automation
 
 ### 1. Explore the Ecosystem
 
-Familiarize yourself with the [Functional Implementation Domains](/implementation-domains/) and [Hierarchical System Levels](/system-levels/) to understand how FEAST components work together.
+Familiarize yourself with the project to understand how FEAST components work together.
 
 ### 2. Join the Community
 

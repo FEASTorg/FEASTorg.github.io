@@ -1,9 +1,14 @@
 ---
 layout: page
 title: VEGIES Concept
-nav_exclude: true
-permalink: /vegies-concept/
+permalink: /archive/vegies/
+parent: Archive
+nav_order: 9
 ---
+
+## VEGIES
+
+**Versatile External Gear, Interfaces, and Experimental Subsystems** or _"vegies"_ is a conceptual framework for user-fabricated hardware that can integrate with BREADS-compatible systems. This includes DIY sensors, actuators, and tools made through various fabrication methods like 3D printing, digital manufacturing, and component modification. Conceptually, these are used by the BREADS hardware domain and would be considered as "below" BREADS in the hierarchy (VEGIES -> BREADS -> FROOTS -> PROTINS -> SUGIRS).
 
 ## Overview
 

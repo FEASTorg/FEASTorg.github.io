@@ -10,7 +10,7 @@
 
 - [x] Update all templates to use revised KMLib
 
-- [ ] Clean up concepts:
+- [x] Clean up concepts:
   - VEGIS and CRUST
   - The 2 stacks
   - SLICE, LOAF, BATCH, OVEN
