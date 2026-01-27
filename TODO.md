@@ -45,3 +45,5 @@
 - [ ] [KiCad-Simulation-Examples](https://github.com/FEASTorg/KiCad-Simulation-Examples)
 
 - [ ] [KiCad-Databases](https://github.com/FEASTorg/KiCad-Databases)
+
+- [ ] rename from FEASTorg to feast-labs? Note that [github.com/feast-dev](https://github.com/feast-dev) is a taken and well established name for the feast-dev ML feature store project.
