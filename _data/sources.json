@@ -1,13 +1,64 @@
 {
     "sources": [
         {
+            "name": "anolis",
+            "title": "anolis",
+            "repo": "FEASTorg/anolis",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/anolis",
+            "nav_order": 1,
+            "redirect_from": [
+                "/anolis/",
+                "/anolis"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "anolis-provider-sim",
+            "title": "anolis-provider-sim",
+            "repo": "FEASTorg/anolis-provider-sim",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/anolis-provider-sim",
+            "nav_order": 2,
+            "redirect_from": [
+                "/anolis-provider-sim/",
+                "/anolis-provider-sim"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "anolis-protocol",
+            "title": "anolis-protocol",
+            "repo": "FEASTorg/anolis-protocol",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/anolis-protocol",
+            "nav_order": 3,
+            "redirect_from": [
+                "/anolis-protocol/",
+                "/anolis-protocol"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
             "name": "breads",
             "title": "BREADS",
             "repo": "FEASTorg/BREADS",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/breads",
-            "nav_order": 1,
+            "nav_order": 4,
             "redirect_from": [
                 "/breads/",
                 "/breads"
@@ -24,9 +75,27 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/crumbs",
+            "nav_order": 5,
             "redirect_from": [
                 "/crumbs/",
                 "/crumbs"
+            ],
+            "exclude": [
+                "**/*.xcf",
+                "**/TODO.md"
+            ]
+        },
+        {
+            "name": "fluxgraph",
+            "title": "fluxgraph",
+            "repo": "FEASTorg/fluxgraph",
+            "ref": "main",
+            "subdir": "docs",
+            "mount": "projects/fluxgraph",
+            "nav_order": 6,
+            "redirect_from": [
+                "/fluxgraph/",
+                "/fluxgraph"
             ],
             "exclude": [
                 "**/*.xcf",
@@ -40,6 +109,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/linux-wire",
+            "nav_order": 7,
             "redirect_from": [
                 "/linux-wire/",
                 "/linux-wire"
@@ -56,6 +126,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-master-lib",
+            "nav_order": 8,
             "redirect_from": [
                 "/kicad-master-lib/",
                 "/kicad-master-lib"
@@ -72,6 +143,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-simulation-examples",
+            "nav_order": 9,
             "redirect_from": [
                 "/kicad-simulation-examples/",
                 "/kicad-simulation-examples"
@@ -88,6 +160,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/protokit",
+            "nav_order": 10,
             "redirect_from": [
                 "/protokit/",
                 "/protokit"
@@ -104,6 +177,7 @@
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/nano-dev-boards",
+            "nav_order": 11,
             "redirect_from": [
                 "/nano-dev-boards/",
                 "/nano-dev-boards"
