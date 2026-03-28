@@ -12,7 +12,7 @@ FEAST provides a variety of resources to support hardware and software developme
 
   **KiCad-Master-Lib** is a centralized and curated library of schematic symbols, PCB footprints, and 3D models for use with KiCad.
 
-- [KiCad-Simulation-Examples](/kicad-simulation-examples/)
+- [KiCad-Simulation-Examples](/KiCad-Simulation-Examples/)
 
   **KiCad-Simulation-Examples** is a collection of simulation-ready examples and tutorials for circuit validation and analysis using KiCad’s integrated simulation features.
 

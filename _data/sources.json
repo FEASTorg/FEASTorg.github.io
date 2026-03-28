@@ -137,23 +137,6 @@
             ]
         },
         {
-            "name": "kicad-simulation-examples",
-            "title": "KiCad Simulation Examples",
-            "repo": "FEASTorg/KiCad-Simulation-Examples",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "developer-resources/kicad-simulation-examples",
-            "nav_order": 9,
-            "redirect_from": [
-                "/kicad-simulation-examples/",
-                "/kicad-simulation-examples"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
             "name": "protokit",
             "title": "protokit",
             "repo": "FEASTorg/protokit",

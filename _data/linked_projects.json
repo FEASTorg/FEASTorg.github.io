@@ -71,6 +71,11 @@
             "url": "/Slice_PRTO_SMT_S2L/"
         },
         {
+            "name": "KiCad-Simulation-Examples",
+            "title": "KiCad Simulation Examples",
+            "url": "/KiCad-Simulation-Examples/"
+        },
+        {
             "name": "KNEEAD",
             "title": "KNEEAD",
             "url": "/KNEEAD/"
