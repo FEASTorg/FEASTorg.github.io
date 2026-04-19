@@ -1,57 +1,6 @@
 {
     "sources": [
         {
-            "name": "anolis",
-            "title": "anolis",
-            "repo": "FEASTorg/anolis",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "projects/anolis",
-            "nav_order": 1,
-            "redirect_from": [
-                "/anolis/",
-                "/anolis"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
-            "name": "anolis-provider-sim",
-            "title": "anolis-provider-sim",
-            "repo": "FEASTorg/anolis-provider-sim",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "projects/anolis-provider-sim",
-            "nav_order": 2,
-            "redirect_from": [
-                "/anolis-provider-sim/",
-                "/anolis-provider-sim"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
-            "name": "anolis-protocol",
-            "title": "anolis-protocol",
-            "repo": "FEASTorg/anolis-protocol",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "projects/anolis-protocol",
-            "nav_order": 3,
-            "redirect_from": [
-                "/anolis-protocol/",
-                "/anolis-protocol"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
             "name": "breads",
             "title": "BREADS",
             "repo": "FEASTorg/BREADS",
@@ -79,23 +28,6 @@
             "redirect_from": [
                 "/crumbs/",
                 "/crumbs"
-            ],
-            "exclude": [
-                "**/*.xcf",
-                "**/TODO.md"
-            ]
-        },
-        {
-            "name": "fluxgraph",
-            "title": "fluxgraph",
-            "repo": "FEASTorg/fluxgraph",
-            "ref": "main",
-            "subdir": "docs",
-            "mount": "projects/fluxgraph",
-            "nav_order": 6,
-            "redirect_from": [
-                "/fluxgraph/",
-                "/fluxgraph"
             ],
             "exclude": [
                 "**/*.xcf",
