@@ -5,7 +5,7 @@ date: 2026-01-26 13:24:00 -0400
 author: Cameron K. Brooks
 ---
 
-As we kick off 2026, I wanted to share some exciting updates on the progress we've made with FEASTorg and outline our plans for the year ahead.
+As we kick off 2026, I wanted to share some exciting updates on the progress we've made with feastorg and outline our plans for the year ahead.
 
 ## KiCad-Master-Lib
 
@@ -15,4 +15,4 @@ In addition, we've added numerous new components, improved existing footprints, 
 
 ## Main Site Improvements
 
-A large change has been the archiving of the "Implementation Domains" and "System Levels" pages. These pages served their purpose during the initial phases of FEASTorg while I explored the area and organization of the stack but have now been retired to streamline our documentation as we have progressed away from the exact ideas presented in those pages.
+A large change has been the archiving of the "Implementation Domains" and "System Levels" pages. These pages served their purpose during the initial phases of feastorg while I explored the area and organization of the stack but have now been retired to streamline our documentation as we have progressed away from the exact ideas presented in those pages.

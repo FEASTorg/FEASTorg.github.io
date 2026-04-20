@@ -1,6 +1,6 @@
-# FEASTorg Documentation
+# feastorg Documentation
 
-Welcome to the source repository for the FEASTorg documentation site!
+Welcome to the source repository for the feastorg documentation site!
 
 > **🌐 [Check out our live site!](https://feastorg.github.io/)**
 

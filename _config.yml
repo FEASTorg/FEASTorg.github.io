@@ -1,22 +1,22 @@
-title: FEASTorg
+title: feastorg
 description: >-
-  This is the main FEASTorg landing site, with links to each project.
+  This is the main feastorg landing site, with links to each project.
 baseurl: "" # Hosted at https://feastorg.github.io
 url: "https://feastorg.github.io"
 
 # SEO and metadata
-author: FEASTorg
+author: feastorg
 keywords: "automation, FEAST, IoT, industrial automation, hardware, firmware, middleware, software"
 lang: en-US
 
 # Social links
-github_username: FEASTorg
+github_username: feastorg
 
 # Social metadata
 social:
-  name: FEASTorg
+  name: feastorg
   links:
-    - https://github.com/FEASTorg
+    - https://github.com/feastorg
 
 # Theme and plugins
 theme: just-the-docs
@@ -31,7 +31,7 @@ plugins:
 # Just the Docs settings
 logo: /assets/images/cornucopia-feast-banner.png
 favicon_ico: "/assets/images/favicon.ico"
-repository: https://github.com/FEASTorg/FEASTorg.github.io
+repository: https://github.com/feastorg/feastorg.github.io
 color_scheme: feast
 search_enabled: true
 search:
@@ -47,8 +47,8 @@ enable_copy_code_button: true
 heading_anchors: true
 nav_error_report: true
 aux_links:
-  "FEASTorg on GitHub":
-    - "https://github.com/FEASTorg"
+  "feastorg on GitHub":
+    - "https://github.com/feastorg"
 aux_links_new_tab: false
 
 # Relative link fixer

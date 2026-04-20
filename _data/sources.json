@@ -3,7 +3,7 @@
         {
             "name": "breads",
             "title": "BREADS",
-            "repo": "FEASTorg/BREADS",
+            "repo": "feastorg/BREADS",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/breads",
@@ -20,7 +20,7 @@
         {
             "name": "crumbs",
             "title": "CRUMBS",
-            "repo": "FEASTorg/CRUMBS",
+            "repo": "feastorg/CRUMBS",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/crumbs",
@@ -37,7 +37,7 @@
         {
             "name": "linux-wire",
             "title": "linux-wire",
-            "repo": "FEASTorg/linux-wire",
+            "repo": "feastorg/linux-wire",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/linux-wire",
@@ -54,7 +54,7 @@
         {
             "name": "kicad-master-lib",
             "title": "KiCad Master Lib",
-            "repo": "FEASTorg/KiCad-Master-Lib",
+            "repo": "feastorg/KiCad-Master-Lib",
             "ref": "main",
             "subdir": "docs",
             "mount": "developer-resources/kicad-master-lib",
@@ -71,7 +71,7 @@
         {
             "name": "protokit",
             "title": "protokit",
-            "repo": "FEASTorg/protokit",
+            "repo": "feastorg/protokit",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/protokit",
@@ -88,7 +88,7 @@
         {
             "name": "nano-dev-boards",
             "title": "nano-dev-boards",
-            "repo": "FEASTorg/nano-dev-boards",
+            "repo": "feastorg/nano-dev-boards",
             "ref": "main",
             "subdir": "docs",
             "mount": "projects/nano-dev-boards",

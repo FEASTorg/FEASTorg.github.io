@@ -15,7 +15,7 @@ FEAST is an open-source framework designed to democratize industrial automation 
 
 [Get Started](/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Projects](/projects/){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
-[View on GitHub][FEASTorg Github]{: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[View on GitHub][feastorg Github]{: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 ---
 
@@ -43,4 +43,4 @@ FEAST provides a comprehensive ecosystem for industrial automation that bridges 
 
 Ready to join the FEAST community? Check out the [Contributing](/contributing/) page to learn how you can participate in shaping the future of scientific and industrial automation. This is an active research and development project, and contribution may take many forms so please reach out if you are interested in helping!
 
-[FEASTorg Github]: https://github.com/FEASTorg
+[feastorg Github]: https://github.com/feastorg

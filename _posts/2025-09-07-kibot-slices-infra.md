@@ -5,7 +5,7 @@ date: 2025-09-07 17:18:45 -0400
 author: Cameron K. Brooks
 ---
 
-We now have a **reusable CI/CD pipeline** for KiCad boards that builds with **KiBot**, generates a Markdown index, and deploys to **GitHub Pages**—all centralized in **[`FEASTorg/slice-infra`](https://github.com/FEASTorg/slice-infra)**. First trials complete and working at: **[`FEASTorg/Slice_DCMT`](https://feastorg.github.io/Slice_DCMT)** and **[`FEASTorg/Slice_TEMP`](https://feastorg.github.io/Slice_TEMP)**.
+We now have a **reusable CI/CD pipeline** for KiCad boards that builds with **KiBot**, generates a Markdown index, and deploys to **GitHub Pages**—all centralized in **[`feastorg/slice-infra`](https://github.com/feastorg/slice-infra)**. First trials complete and working at: **[`feastorg/Slice_DCMT`](https://feastorg.github.io/Slice_DCMT)** and **[`feastorg/Slice_TEMP`](https://feastorg.github.io/Slice_TEMP)**.
 
 ### What has shipped?
 
@@ -35,16 +35,16 @@ on:
 
 jobs:
   kibot:
-    uses: FEASTorg/slice-infra/.github/workflows/kibot-ci.yml@main
+    uses: feastorg/slice-infra/.github/workflows/kibot-ci.yml@main
 
   gen-kibot-index:
-    uses: FEASTorg/slice-infra/.github/workflows/publish-kibot.yml@main
+    uses: feastorg/slice-infra/.github/workflows/publish-kibot.yml@main
     needs: [kibot]
     with:
       kibot_run_id: ${{ needs.kibot.outputs.kibot_run_id }}
 
   deploy-pages:
-    uses: FEASTorg/slice-infra/.github/workflows/deploy-pages.yml@main
+    uses: feastorg/slice-infra/.github/workflows/deploy-pages.yml@main
     needs: [gen-kibot-index]
     with:
       kibot_run_id: ${{ needs.kibot.outputs.kibot_run_id }}

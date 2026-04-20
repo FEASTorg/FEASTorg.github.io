@@ -40,7 +40,7 @@ Familiarize yourself with the project to understand how FEAST components work to
 
 ### 2. Join the Community
 
-- Visit our [GitHub organization](https://github.com/FEASTorg)
+- Visit our [GitHub organization](https://github.com/feastorg)
 - Participate in project discussions
 - Follow our [Developer Resources](/developer-resources/) for tools and guidelines
 

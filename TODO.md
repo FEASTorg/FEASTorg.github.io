@@ -12,10 +12,10 @@
 
 - [ ] Dependency Map: Project interconnections & Technology stack relationships
 
-- [ ] [KiCad-RPi-HAT](https://github.com/FEASTorg/KiCad-RPi-HAT)
+- [ ] [KiCad-RPi-HAT](https://github.com/feastorg/KiCad-RPi-HAT)
 
-- [ ] [KiCad-Simulation-Examples](https://github.com/FEASTorg/KiCad-Simulation-Examples)
+- [ ] [KiCad-Simulation-Examples](https://github.com/feastorg/KiCad-Simulation-Examples)
 
-- [ ] [KiCad-Databases](https://github.com/FEASTorg/KiCad-Databases)
+- [ ] [KiCad-Databases](https://github.com/feastorg/KiCad-Databases)
 
-- [ ] rename from FEASTorg to feast-labs? Note that [github.com/feast-dev](https://github.com/feast-dev) is a taken and well established name for the feast-dev ML feature store project. Maybe feast-group? Or another idea would be to rename to feast-org or feast-hq?
+- [ ] rename from feastorg to feast-labs? Note that [github.com/feast-dev](https://github.com/feast-dev) is a taken and well established name for the feast-dev ML feature store project. Maybe feast-group? Or another idea would be to rename to feast-org or feast-hq?

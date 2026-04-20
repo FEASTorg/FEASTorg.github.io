@@ -8,7 +8,7 @@ has_children: true
 
 ## Archive
 
-This section contains archived concepts and documentation from earlier phases of the FEAST project. These materials represent the exploration and evolution of ideas during the initial development of FEASTorg.
+This section contains archived concepts and documentation from earlier phases of the FEAST project. These materials represent the exploration and evolution of ideas during the initial development of feastorg.
 
 While these concepts are no longer part of the active project structure, they are preserved here for historical reference and to document the development process.
 
@@ -26,4 +26,4 @@ While these concepts are no longer part of the active project structure, they ar
 
 ## Note
 
-These archived materials served their purpose during the conceptual phases of FEASTorg. The project has evolved beyond these specific organizational structures, but the foundational ideas continue to influence the current direction.
+These archived materials served their purpose during the conceptual phases of feastorg. The project has evolved beyond these specific organizational structures, but the foundational ideas continue to influence the current direction.

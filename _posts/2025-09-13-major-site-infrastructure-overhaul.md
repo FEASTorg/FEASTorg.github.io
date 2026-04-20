@@ -5,7 +5,7 @@ date: 2025-09-13 18:55:00 -0400
 author: Cameron K. Brooks
 ---
 
-Major updates to the FEASTorg website structure and design completed today.
+Major updates to the feastorg website structure and design completed today.
 
 ## Changes Made
 
