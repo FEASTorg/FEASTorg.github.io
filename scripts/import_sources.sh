@@ -42,6 +42,44 @@ require_cmd() {
   command -v "$1" >/dev/null 2>&1 || die "$1 not found"
 }
 
+# Retry helper with exponential backoff.
+retry_cmd() {
+  local label="$1"
+  shift
+
+  local max_retries="${IMPORT_MAX_RETRIES:-3}"
+  local base_delay="${IMPORT_RETRY_BASE_SECONDS:-2}"
+  local attempt=1
+  local delay="$base_delay"
+
+  while true; do
+    if "$@"; then
+      return 0
+    fi
+    if (( attempt >= max_retries )); then
+      echo "error: ${label} failed after ${attempt} attempts" >&2
+      return 1
+    fi
+    echo "warning: ${label} failed on attempt ${attempt}/${max_retries}; retrying in ${delay}s..." >&2
+    sleep "$delay"
+    attempt=$((attempt + 1))
+    delay=$((delay * 2))
+  done
+}
+
+clone_sparse_repo() {
+  local url="$1"
+  local ref="$2"
+  local tmp_abs="$3"
+  local sub="$4"
+
+  rm -rf -- "${tmp_abs:?}"
+  git clone --quiet --filter=blob:none --no-checkout --depth 1 --branch "$ref" "$url" "$tmp_abs"
+  git -C "$tmp_abs" sparse-checkout init --cone
+  git -C "$tmp_abs" sparse-checkout set "$sub"
+  git -C "$tmp_abs" checkout --quiet
+}
+
 sanitize_relpath() {
   # Reject empty, absolute, or parent-traversal paths.
   local p="${1:-}"
@@ -80,11 +118,8 @@ jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
   url="https://github.com/${repo}.git"
 
   echo "::group::Clone ${repo}@${ref} -> ${tmp} (sparse: ${sub})"
-  rm -rf -- "${TMP_ABS:?}"
-  git clone --quiet --filter=blob:none --no-checkout --depth 1 --branch "$ref" "$url" "$TMP_ABS"
-  git -C "$TMP_ABS" sparse-checkout init --cone
-  git -C "$TMP_ABS" sparse-checkout set "$sub"
-  git -C "$TMP_ABS" checkout --quiet
+  retry_cmd "clone ${repo}@${ref}" clone_sparse_repo "$url" "$ref" "$TMP_ABS" "$sub" \
+    || die "unable to import ${repo}@${ref}"
   echo "::endgroup::"
 
   echo "::group::Sync ${sub} -> ${mount}"

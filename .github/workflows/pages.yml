@@ -4,7 +4,7 @@ on:
   push: { branches: ["main"] }
   workflow_dispatch:
   schedule:
-    # 23:11 EST (UTC-5) daily -> 04:11 UTC
+    # 04:11 UTC daily (~23:11 ET winter, ~00:11 ET summer)
     - cron: "11 4 * * *"
 
 permissions:
@@ -28,6 +28,9 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
+
+      - name: Install import tooling
+        run: sudo apt-get update && sudo apt-get install -y jq rsync
 
       - name: Setup Pages
         id: pages
