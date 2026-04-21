@@ -3,7 +3,7 @@
     {% for link in site.aux_links %}
       {% assign is_github_link = link.last contains "github.com" %}
       <li class="aux-nav-list-item">
-        <a href="{{ link.last }}" class="site-button{% if is_github_link %} feast-aux-link--icon feast-aux-link--github{% endif %}"
+        <a href="{{ link.last }}" class="feast-aux-link{% if is_github_link %} feast-aux-link--icon feast-aux-link--github{% endif %}"
           {% if site.aux_links_new_tab %}
           target="_blank" rel="noopener noreferrer"
           {% endif %}

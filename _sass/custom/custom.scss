@@ -17,18 +17,35 @@
 }
 
 .feast-aux-nav {
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow: visible;
   margin-left: 0.35rem;
   padding-left: 0.6rem;
+  padding-right: 0;
   border-left: 1px solid rgba($body-text-color, 0.2);
 }
 
 .feast-aux-nav .aux-nav-list {
   display: flex;
   align-items: center;
+  height: auto;
   gap: 0;
 }
 
-.feast-aux-link--icon.site-button {
+.feast-aux-nav .aux-nav-list-item {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.feast-aux-link {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.feast-aux-link--icon {
   width: 2rem;
   height: 2rem;
   min-width: 2rem;
@@ -38,18 +55,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: transparent;
+  color: inherit;
   border: 1px solid transparent;
   background-color: transparent;
   box-shadow: none;
 }
 
-.feast-aux-link--icon.site-button:hover {
+.feast-aux-link--icon:hover {
   background-color: rgba($link-color, 0.1);
   border-color: rgba($link-color, 0.25);
 }
 
-.feast-aux-link--icon.site-button:focus-visible {
+.feast-aux-link--icon:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 3px rgba($link-color, 0.3);
 }
@@ -61,7 +78,7 @@
   display: block;
 }
 
-.feast-aux-link--icon.site-button:hover .feast-aux-link__icon {
+.feast-aux-link--icon:hover .feast-aux-link__icon {
   fill: $body-heading-color;
 }
 
