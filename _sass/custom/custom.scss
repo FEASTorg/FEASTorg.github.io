@@ -1,0 +1,36 @@
+.feast-theme-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 0.5rem;
+  white-space: nowrap;
+}
+
+.feast-theme-switcher__label {
+  color: $search-result-preview-color;
+}
+
+.feast-theme-switcher__button {
+  min-width: 3.75rem;
+  padding: 0.25rem 0.45rem;
+}
+
+.feast-theme-switcher__button.is-active {
+  color: $white;
+  background-color: $btn-primary-color;
+  border-color: $btn-primary-color;
+}
+
+@media (max-width: 50rem) {
+  .feast-theme-switcher {
+    margin: 0 0.25rem;
+  }
+
+  .feast-theme-switcher__label {
+    display: none;
+  }
+
+  .feast-theme-switcher__button {
+    min-width: 3.2rem;
+  }
+}

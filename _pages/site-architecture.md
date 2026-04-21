@@ -49,6 +49,8 @@ These are managed via `_data/linked_projects.json` and automatically generate re
 - Growth greens (automation/nature)
 - Neutral grays (surfaces)
 
+**Theme behavior**: A custom header switcher (`_includes/header_custom.html`) supports `System`, `Light`, and `Dark` modes. The site defaults to browser preference when no user override is saved and persists user selections in local storage via `_includes/head_custom.html`.
+
 ## Build Pipeline
 
 **Triggers**: Push to main, daily at 04:11 UTC (~23:11 ET in winter / ~00:11 ET in summer), manual dispatch  

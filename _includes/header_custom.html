@@ -1,0 +1,75 @@
+<div id="feast-theme-switcher" class="feast-theme-switcher" role="group" aria-label="Theme mode switcher">
+  <span class="feast-theme-switcher__label text-small">Theme</span>
+  <button
+    type="button"
+    class="btn feast-theme-switcher__button js-feast-theme-option"
+    data-theme-option="system"
+    aria-pressed="false"
+  >
+    System
+  </button>
+  <button
+    type="button"
+    class="btn feast-theme-switcher__button js-feast-theme-option"
+    data-theme-option="light"
+    aria-pressed="false"
+  >
+    Light
+  </button>
+  <button
+    type="button"
+    class="btn feast-theme-switcher__button js-feast-theme-option"
+    data-theme-option="dark"
+    aria-pressed="false"
+  >
+    Dark
+  </button>
+</div>
+
+<script>
+(function () {
+  var switcher = document.getElementById("feast-theme-switcher");
+  if (!switcher || !window.feastTheme || typeof window.feastTheme.getPreference !== "function") {
+    return;
+  }
+
+  var buttons = switcher.querySelectorAll(".js-feast-theme-option");
+
+  function setButtonState(button, isActive) {
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    if (button.classList && typeof button.classList.toggle === "function") {
+      button.classList.toggle("is-active", isActive);
+    }
+  }
+
+  function syncSwitcherState() {
+    var activePreference = window.feastTheme.getPreference();
+    for (var index = 0; index < buttons.length; index += 1) {
+      var button = buttons[index];
+      var themeOption = button.getAttribute("data-theme-option");
+      setButtonState(button, themeOption === activePreference);
+    }
+  }
+
+  function bindClick(button) {
+    var handler = function () {
+      var preference = button.getAttribute("data-theme-option");
+      window.feastTheme.setPreference(preference);
+      syncSwitcherState();
+    };
+
+    if (window.jtd && typeof window.jtd.addEvent === "function") {
+      window.jtd.addEvent(button, "click", handler);
+    } else if (button.addEventListener) {
+      button.addEventListener("click", handler);
+    }
+  }
+
+  for (var index = 0; index < buttons.length; index += 1) {
+    bindClick(buttons[index]);
+  }
+
+  window.feastTheme.onPreferenceApplied = syncSwitcherState;
+  syncSwitcherState();
+})();
+</script>

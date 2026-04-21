@@ -1,0 +1,104 @@
+<script>
+(function () {
+  var STORAGE_KEY = "feast-theme-preference";
+  var PREF_SYSTEM = "system";
+  var PREF_LIGHT = "light";
+  var PREF_DARK = "dark";
+  var DEFAULT_THEME = "default";
+  var DARK_THEME = "dark";
+  var mediaQuery =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+  var feastTheme = window.feastTheme || {};
+
+  function normalizePreference(value) {
+    if (value === PREF_LIGHT || value === PREF_DARK) {
+      return value;
+    }
+    return PREF_SYSTEM;
+  }
+
+  function getStoredPreference() {
+    try {
+      return window.localStorage.getItem(STORAGE_KEY);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function setStoredPreference(preference) {
+    try {
+      if (preference === PREF_SYSTEM) {
+        window.localStorage.removeItem(STORAGE_KEY);
+      } else {
+        window.localStorage.setItem(STORAGE_KEY, preference);
+      }
+    } catch (error) {
+      // Ignore storage failures (private browsing, blocked storage, etc.)
+    }
+  }
+
+  function resolveTheme(preference) {
+    if (preference === PREF_DARK) {
+      return DARK_THEME;
+    }
+    if (preference === PREF_LIGHT) {
+      return DEFAULT_THEME;
+    }
+    if (mediaQuery && mediaQuery.matches) {
+      return DARK_THEME;
+    }
+    return DEFAULT_THEME;
+  }
+
+  function applyTheme(preference) {
+    if (window.jtd && typeof window.jtd.setTheme === "function") {
+      window.jtd.setTheme(resolveTheme(preference));
+    }
+  }
+
+  function notifyPreferenceApplied() {
+    if (typeof feastTheme.onPreferenceApplied === "function") {
+      feastTheme.onPreferenceApplied(currentPreference, resolveTheme(currentPreference));
+    }
+  }
+
+  function applyCurrentPreference() {
+    applyTheme(currentPreference);
+    notifyPreferenceApplied();
+  }
+
+  function handleSystemThemeChange() {
+    if (currentPreference === PREF_SYSTEM) {
+      applyCurrentPreference();
+    }
+  }
+
+  var currentPreference = normalizePreference(getStoredPreference());
+
+  feastTheme.getPreference = function () {
+    return currentPreference;
+  };
+
+  feastTheme.setPreference = function (preference) {
+    currentPreference = normalizePreference(preference);
+    setStoredPreference(currentPreference);
+    applyCurrentPreference();
+    return currentPreference;
+  };
+
+  feastTheme.resolveTheme = function (preference) {
+    return resolveTheme(normalizePreference(preference));
+  };
+
+  window.feastTheme = feastTheme;
+  applyCurrentPreference();
+
+  if (mediaQuery) {
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleSystemThemeChange);
+    } else if (typeof mediaQuery.addListener === "function") {
+      mediaQuery.addListener(handleSystemThemeChange);
+    }
+  }
+})();
+</script>
