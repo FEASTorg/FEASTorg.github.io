@@ -7,7 +7,7 @@
   border: 1px solid $border-color;
   border-radius: 999px;
   background-color: $body-background-color;
-  box-shadow: 0 1px 2px rgba($black, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   white-space: nowrap;
 }
 
@@ -39,9 +39,9 @@
 }
 
 .feast-theme-switcher__button.is-active {
-  color: $white;
+  color: #fff;
   background-color: $btn-primary-color;
-  box-shadow: 0 1px 2px rgba($black, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 50rem) {
