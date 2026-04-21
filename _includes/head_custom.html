@@ -1,7 +1,6 @@
 <script>
 (function () {
   var STORAGE_KEY = "feast-theme-preference";
-  var PREF_SYSTEM = "system";
   var PREF_LIGHT = "light";
   var PREF_DARK = "dark";
   var DEFAULT_THEME = "default";
@@ -14,37 +13,42 @@
     if (value === PREF_LIGHT || value === PREF_DARK) {
       return value;
     }
-    return PREF_SYSTEM;
+    return null;
   }
 
   function getStoredPreference() {
     try {
-      return window.localStorage.getItem(STORAGE_KEY);
+      return normalizePreference(window.localStorage.getItem(STORAGE_KEY));
     } catch (error) {
       return null;
     }
   }
 
-  function setStoredPreference(preference) {
+  function clearStoredPreference() {
     try {
-      if (preference === PREF_SYSTEM) {
-        window.localStorage.removeItem(STORAGE_KEY);
-      } else {
-        window.localStorage.setItem(STORAGE_KEY, preference);
-      }
+      window.localStorage.removeItem(STORAGE_KEY);
     } catch (error) {
       // Ignore storage failures (private browsing, blocked storage, etc.)
     }
   }
 
+  function setStoredPreference(preference) {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, preference);
+    } catch (error) {
+      // Ignore storage failures (private browsing, blocked storage, etc.)
+    }
+  }
+
+  function getSystemPreference() {
+    if (mediaQuery && mediaQuery.matches) {
+      return PREF_DARK;
+    }
+    return PREF_LIGHT;
+  }
+
   function resolveTheme(preference) {
     if (preference === PREF_DARK) {
-      return DARK_THEME;
-    }
-    if (preference === PREF_LIGHT) {
-      return DEFAULT_THEME;
-    }
-    if (mediaQuery && mediaQuery.matches) {
       return DARK_THEME;
     }
     return DEFAULT_THEME;
@@ -58,7 +62,11 @@
 
   function notifyPreferenceApplied() {
     if (typeof feastTheme.onPreferenceApplied === "function") {
-      feastTheme.onPreferenceApplied(currentPreference, resolveTheme(currentPreference));
+      feastTheme.onPreferenceApplied(
+        currentPreference,
+        resolveTheme(currentPreference),
+        hasUserPreference
+      );
     }
   }
 
@@ -68,26 +76,59 @@
   }
 
   function handleSystemThemeChange() {
-    if (currentPreference === PREF_SYSTEM) {
+    if (!hasUserPreference) {
+      currentPreference = getSystemPreference();
       applyCurrentPreference();
     }
   }
 
-  var currentPreference = normalizePreference(getStoredPreference());
+  var storedPreference = getStoredPreference();
+  var hasUserPreference = storedPreference !== null;
+  var currentPreference = hasUserPreference
+    ? storedPreference
+    : getSystemPreference();
 
   feastTheme.getPreference = function () {
     return currentPreference;
   };
 
+  feastTheme.hasUserPreference = function () {
+    return hasUserPreference;
+  };
+
   feastTheme.setPreference = function (preference) {
-    currentPreference = normalizePreference(preference);
+    var normalizedPreference = normalizePreference(preference);
+    if (!normalizedPreference) {
+      return currentPreference;
+    }
+    currentPreference = normalizedPreference;
+    hasUserPreference = true;
     setStoredPreference(currentPreference);
     applyCurrentPreference();
     return currentPreference;
   };
 
+  feastTheme.togglePreference = function () {
+    if (currentPreference === PREF_DARK) {
+      return feastTheme.setPreference(PREF_LIGHT);
+    }
+    return feastTheme.setPreference(PREF_DARK);
+  };
+
+  feastTheme.clearPreference = function () {
+    hasUserPreference = false;
+    clearStoredPreference();
+    currentPreference = getSystemPreference();
+    applyCurrentPreference();
+    return currentPreference;
+  };
+
   feastTheme.resolveTheme = function (preference) {
-    return resolveTheme(normalizePreference(preference));
+    var normalizedPreference = normalizePreference(preference);
+    if (!normalizedPreference) {
+      normalizedPreference = getSystemPreference();
+    }
+    return resolveTheme(normalizedPreference);
   };
 
   window.feastTheme = feastTheme;

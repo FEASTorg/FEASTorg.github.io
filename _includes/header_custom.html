@@ -1,80 +1,91 @@
-<div id="feast-theme-switcher" class="feast-theme-switcher" role="group" aria-label="Theme mode switcher">
+<div id="feast-theme-switcher" class="feast-theme-switcher">
   <button
+    id="feast-theme-toggle"
     type="button"
-    class="feast-theme-switcher__button js-feast-theme-option"
-    data-theme-option="system"
-    aria-pressed="false"
-    aria-label="Use system theme setting"
-    title="System"
+    class="feast-theme-switcher__toggle"
+    role="switch"
+    aria-checked="false"
+    aria-label="Switch to dark theme"
+    title="Switch to dark theme"
   >
-    Auto
-  </button>
-  <button
-    type="button"
-    class="feast-theme-switcher__button js-feast-theme-option"
-    data-theme-option="light"
-    aria-pressed="false"
-    aria-label="Use light theme"
-    title="Light"
-  >
-    Light
-  </button>
-  <button
-    type="button"
-    class="feast-theme-switcher__button js-feast-theme-option"
-    data-theme-option="dark"
-    aria-pressed="false"
-    aria-label="Use dark theme"
-    title="Dark"
-  >
-    Dark
+    <span class="feast-theme-switcher__glyph feast-theme-switcher__glyph--sun" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2V4"></path>
+        <path d="M12 20V22"></path>
+        <path d="M4.93 4.93L6.34 6.34"></path>
+        <path d="M17.66 17.66L19.07 19.07"></path>
+        <path d="M2 12H4"></path>
+        <path d="M20 12H22"></path>
+        <path d="M4.93 19.07L6.34 17.66"></path>
+        <path d="M17.66 6.34L19.07 4.93"></path>
+      </svg>
+    </span>
+    <span class="feast-theme-switcher__glyph feast-theme-switcher__glyph--moon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+      </svg>
+    </span>
+    <span class="feast-theme-switcher__thumb" aria-hidden="true">
+      <svg class="feast-theme-switcher__thumb-icon feast-theme-switcher__thumb-icon--sun" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2V4"></path>
+        <path d="M12 20V22"></path>
+        <path d="M4.93 4.93L6.34 6.34"></path>
+        <path d="M17.66 17.66L19.07 19.07"></path>
+        <path d="M2 12H4"></path>
+        <path d="M20 12H22"></path>
+        <path d="M4.93 19.07L6.34 17.66"></path>
+        <path d="M17.66 6.34L19.07 4.93"></path>
+      </svg>
+      <svg class="feast-theme-switcher__thumb-icon feast-theme-switcher__thumb-icon--moon" viewBox="0 0 24 24" fill="none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+      </svg>
+    </span>
   </button>
 </div>
 
 <script>
 (function () {
-  var switcher = document.getElementById("feast-theme-switcher");
-  if (!switcher || !window.feastTheme || typeof window.feastTheme.getPreference !== "function") {
+  var toggle = document.getElementById("feast-theme-toggle");
+  if (
+    !toggle ||
+    !window.feastTheme ||
+    typeof window.feastTheme.getPreference !== "function" ||
+    typeof window.feastTheme.togglePreference !== "function"
+  ) {
     return;
   }
 
-  var buttons = switcher.querySelectorAll(".js-feast-theme-option");
-
-  function setButtonState(button, isActive) {
-    button.setAttribute("aria-pressed", isActive ? "true" : "false");
-    if (button.classList && typeof button.classList.toggle === "function") {
-      button.classList.toggle("is-active", isActive);
+  function syncToggleState() {
+    var isDark = window.feastTheme.getPreference() === "dark";
+    toggle.setAttribute("aria-checked", isDark ? "true" : "false");
+    if (isDark) {
+      toggle.setAttribute("aria-label", "Switch to light theme");
+      toggle.setAttribute("title", "Switch to light theme");
+    } else {
+      toggle.setAttribute("aria-label", "Switch to dark theme");
+      toggle.setAttribute("title", "Switch to dark theme");
+    }
+    if (toggle.classList && typeof toggle.classList.toggle === "function") {
+      toggle.classList.toggle("is-dark", isDark);
     }
   }
 
-  function syncSwitcherState() {
-    var activePreference = window.feastTheme.getPreference();
-    for (var index = 0; index < buttons.length; index += 1) {
-      var button = buttons[index];
-      var themeOption = button.getAttribute("data-theme-option");
-      setButtonState(button, themeOption === activePreference);
-    }
-  }
-
-  function bindClick(button) {
+  function bindToggleClick() {
     var handler = function () {
-      var preference = button.getAttribute("data-theme-option");
-      window.feastTheme.setPreference(preference);
-      syncSwitcherState();
+      window.feastTheme.togglePreference();
+      syncToggleState();
     };
-
     if (window.jtd && typeof window.jtd.addEvent === "function") {
-      window.jtd.addEvent(button, "click", handler);
-    } else if (button.addEventListener) {
-      button.addEventListener("click", handler);
+      window.jtd.addEvent(toggle, "click", handler);
+    } else if (toggle.addEventListener) {
+      toggle.addEventListener("click", handler);
     }
   }
 
-  for (var index = 0; index < buttons.length; index += 1) {
-    bindClick(buttons[index]);
-  }
-
-  window.feastTheme.onPreferenceApplied = syncSwitcherState;
-  syncSwitcherState();
+  bindToggleClick();
+  window.feastTheme.onPreferenceApplied = syncToggleState;
+  syncToggleState();
 })();
 </script>

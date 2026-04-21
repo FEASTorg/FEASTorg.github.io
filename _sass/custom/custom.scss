@@ -1,57 +1,126 @@
 .feast-theme-switcher {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0;
   margin: 0 0.35rem;
-  padding: 0.15rem;
-  border: 1px solid $border-color;
-  border-radius: 999px;
-  background-color: $body-background-color;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  white-space: nowrap;
 }
 
-.feast-theme-switcher__button {
-  border: 0;
+.feast-theme-switcher__toggle {
+  position: relative;
+  width: 3.45rem;
+  height: 1.95rem;
+  padding: 0;
+  border: 1px solid mix($border-color, $body-heading-color, 80%);
   border-radius: 999px;
-  background: transparent;
-  color: $search-result-preview-color;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 0.38rem 0.58rem;
-  min-width: 3.1rem;
+  background-color: mix($body-background-color, $border-color, 82%);
+  appearance: none;
   cursor: pointer;
-  transition:
-    background-color 140ms ease,
-    color 140ms ease,
-    box-shadow 140ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-.feast-theme-switcher__button:hover {
-  color: $body-text-color;
-  background-color: rgba($btn-primary-color, 0.12);
+.feast-theme-switcher__toggle:hover {
+  box-shadow: 0 0 0 3px rgba($link-color, 0.12);
 }
 
-.feast-theme-switcher__button:focus-visible {
+.feast-theme-switcher__toggle:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($link-color, 0.35);
+  box-shadow: 0 0 0 3px rgba($link-color, 0.3);
 }
 
-.feast-theme-switcher__button.is-active {
-  color: #fff;
-  background-color: $btn-primary-color;
+.feast-theme-switcher__glyph {
+  position: absolute;
+  top: 50%;
+  width: 0.85rem;
+  height: 0.85rem;
+  transform: translateY(-50%);
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+.feast-theme-switcher__glyph svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.feast-theme-switcher__glyph--sun {
+  left: 0.4rem;
+  color: mix(#d08b00, $body-heading-color, 45%);
+  opacity: 0.92;
+}
+
+.feast-theme-switcher__glyph--moon {
+  right: 0.4rem;
+  color: rgba($body-text-color, 0.5);
+}
+
+.feast-theme-switcher__thumb {
+  position: absolute;
+  top: 0.19rem;
+  left: 0.19rem;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 180ms ease;
+}
+
+.feast-theme-switcher__thumb-icon {
+  width: 0.9rem;
+  height: 0.9rem;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+}
+
+.feast-theme-switcher__thumb-icon--sun {
+  color: #c97f00;
+}
+
+.feast-theme-switcher__thumb-icon--moon {
+  display: none;
+  color: #223244;
+}
+
+.feast-theme-switcher__toggle.is-dark {
+  background-color: mix($body-background-color, $body-heading-color, 50%);
+  border-color: mix($body-background-color, $body-heading-color, 42%);
+}
+
+.feast-theme-switcher__toggle.is-dark .feast-theme-switcher__thumb {
+  transform: translateX(1.5rem);
+}
+
+.feast-theme-switcher__toggle.is-dark .feast-theme-switcher__thumb-icon--sun {
+  display: none;
+}
+
+.feast-theme-switcher__toggle.is-dark .feast-theme-switcher__thumb-icon--moon {
+  display: block;
+}
+
+.feast-theme-switcher__toggle.is-dark .feast-theme-switcher__glyph--sun {
+  opacity: 0.52;
+}
+
+.feast-theme-switcher__toggle.is-dark .feast-theme-switcher__glyph--moon {
+  color: rgba(#fff, 0.88);
+  opacity: 1;
 }
 
 @media (max-width: 50rem) {
   .feast-theme-switcher {
-    margin: 0 0.2rem;
-  }
-
-  .feast-theme-switcher__button {
-    min-width: 2.75rem;
-    padding: 0.34rem 0.45rem;
-    font-size: 0.7rem;
+    margin: 0 0.15rem;
   }
 }

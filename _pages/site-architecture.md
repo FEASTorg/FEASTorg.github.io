@@ -49,7 +49,7 @@ These are managed via `_data/linked_projects.json` and automatically generate re
 - Growth greens (automation/nature)
 - Neutral grays (surfaces)
 
-**Theme behavior**: A custom header switcher (`_includes/header_custom.html`) supports `System`, `Light`, and `Dark` modes. The site defaults to browser preference when no user override is saved and persists user selections in local storage via `_includes/head_custom.html`.
+**Theme behavior**: A custom header pill toggle (`_includes/header_custom.html`) starts from browser preference on first visit and then lets users switch between light and dark mode with a persisted preference via `_includes/head_custom.html`.
 
 ## Build Pipeline
 
