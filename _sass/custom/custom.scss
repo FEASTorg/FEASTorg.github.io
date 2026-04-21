@@ -4,6 +4,67 @@
   margin: 0 0.35rem;
 }
 
+.feast-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.feast-aux-nav {
+  margin-left: 0.35rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba($body-text-color, 0.2);
+}
+
+.feast-aux-nav .aux-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.feast-aux-link--icon.site-button {
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  border-radius: 999px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  border: 1px solid transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.feast-aux-link--icon.site-button:hover {
+  background-color: rgba($link-color, 0.1);
+  border-color: rgba($link-color, 0.25);
+}
+
+.feast-aux-link--icon.site-button:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba($link-color, 0.3);
+}
+
+.feast-aux-link__icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: rgba($body-text-color, 0.82);
+  display: block;
+}
+
+.feast-aux-link--icon.site-button:hover .feast-aux-link__icon {
+  fill: $body-heading-color;
+}
+
 .feast-theme-switcher__toggle {
   position: relative;
   width: 3.45rem;
@@ -122,5 +183,10 @@
 @media (max-width: 50rem) {
   .feast-theme-switcher {
     margin: 0 0.15rem;
+  }
+
+  .feast-aux-nav {
+    margin-left: 0.2rem;
+    padding-left: 0.35rem;
   }
 }
