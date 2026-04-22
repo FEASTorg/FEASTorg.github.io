@@ -81,9 +81,17 @@ clone_sparse_repo() {
 }
 
 sanitize_relpath() {
-  # Reject empty, absolute, or parent-traversal paths.
+  # Reject empty, absolute, current-dir, parent-traversal, and empty segments.
+  # Valid examples: "docs", "projects/foo"
+  # Invalid examples: ".", "..", "/abs", "a/../b", "a//b"
   local p="${1:-}"
-  [[ -n "$p" && "$p" != /* && "$p" != *"..*" ]] || return 1
+  local seg=""
+  [[ -n "$p" && "$p" != /* && "$p" != "." && "$p" != ".." ]] || return 1
+
+  IFS='/' read -r -a _parts <<<"$p"
+  for seg in "${_parts[@]}"; do
+    [[ -n "$seg" && "$seg" != "." && "$seg" != ".." ]] || return 1
+  done
 }
 
 # --- Preflight -----------------------------------------------------------------
@@ -98,12 +106,15 @@ mkdir -p "${ROOT}/_ext"
 # --- Main ----------------------------------------------------------------------
 
 jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
-  name="$(jq -r .name                <<<"$row")"
-  title="$(jq -r '.title // .name'   <<<"$row")"
-  repo="$(jq -r .repo                <<<"$row")"
-  ref="$(jq -r .ref                  <<<"$row")"
-  sub="$(jq -r .subdir               <<<"$row")"
-  mount="$(jq -r .mount              <<<"$row")"
+  name="$(jq -er '.name // empty' <<<"$row")"   || die "source entry missing name"
+  title="$(jq -r '.title // .name // empty' <<<"$row")"
+  repo="$(jq -er '.repo // empty' <<<"$row")"   || die "source '${name}' missing repo"
+  ref="$(jq -er '.ref // empty' <<<"$row")"     || die "source '${name}' missing ref"
+  sub="$(jq -er '.subdir // empty' <<<"$row")"  || die "source '${name}' missing subdir"
+  mount="$(jq -er '.mount // empty' <<<"$row")" || die "source '${name}' missing mount"
+
+  [[ "$name" =~ ^[A-Za-z0-9._-]+$ ]] || die "invalid source name slug: $name"
+  [[ "$repo" =~ ^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$ ]] || die "invalid repo format: $repo"
 
   sanitize_relpath "$sub"   || die "invalid subdir: $sub"
   sanitize_relpath "$mount" || die "invalid mount: $mount"
@@ -114,6 +125,9 @@ jq -c '.sources[]' "$MANIFEST" | while IFS= read -r row; do
   TMP_ABS="${ROOT}/${tmp}"
   MOUNT_ABS="${ROOT}/${mount}"
   SRC_ABS="${TMP_ABS}/${sub}"
+
+  [[ "${MOUNT_ABS}" != "${ROOT}" && "${MOUNT_ABS}" != "${ROOT}/" ]] \
+    || die "refusing to sync into repo root for source '${name}'"
 
   url="https://github.com/${repo}.git"
 
