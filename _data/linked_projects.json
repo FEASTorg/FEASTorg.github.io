@@ -51,6 +51,16 @@
             "url": "/Slice_TEMP_NUCL_L4L-r1/"
         },
         {
+            "name": "Slice_TEMP_PICO_S2L-r1",
+            "title": "Slice TEMP PICO S2L-r1",
+            "url": "/Slice_TEMP_PICO_S2L-r1/"
+        },
+        {
+            "name": "Slice_TEMP_PICO_L4L-r1",
+            "title": "Slice TEMP PICO L4L-r1",
+            "url": "/Slice_TEMP_PICO_L4L-r1/"
+        },
+        {
             "name": "Slice_PRTO_CONN_S2L",
             "title": "Slice PRTO CONN S2L",
             "url": "/Slice_PRTO_CONN_S2L/"
